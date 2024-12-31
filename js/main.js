@@ -51,7 +51,7 @@
 
 
     // Service and team carousel
-    $(".service-carousel, .team-carousel").owlCarousel({
+    $(".team-carousel").owlCarousel({
         autoplay: false,
         smartSpeed: 1500,
         margin: 30,
@@ -74,7 +74,39 @@
             },
             992:{
                 items:3
+            },
+            1200:{
+                items:4
             }
+        }
+    });
+
+     // Service and team carousel
+     $(".service-carousel, .post-carousel").owlCarousel({
+        autoplay: false,
+        smartSpeed: 1500,
+        margin: 30,
+        dots: false,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            
         }
     });
 
@@ -132,6 +164,49 @@
         loop: true,
         items: 1
     });
+
+    const now = new Date();
+
+const now_string =  new Intl.DateTimeFormat('es-Es', {
+    dateStyle: 'full',
+    timeStyle: 'long',
+    timeZone: 'Europe/Madrid',
+  }).format(now);
+  
+console.log(now_string);
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    const fecha = document.getElementById("fecha");
+    const now = new Date();
+    const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+    fecha.innerText = now.toLocaleDateString('es-ES', options);
+  });
     
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar-expand-lg');
+    var navbarTop = navbar.offsetTop + 50;
+    
+    if (window.pageYOffset > navbarTop) {
+      navbar.classList.add('fixed');
+    } else {
+      navbar.classList.remove('fixed');
+    }
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this)
+    })
+    .then(() => {
+      $('#contactModal').modal('hide');
+      this.reset();
+    setTimeout(function() { 
+        $('#contactModal').modal('hide');
+      }, 500);
+      
+  });
+  
 })(jQuery);
 

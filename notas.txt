@@ -1,6 +1,2 @@
 con el inicio
-1. fecha en el header
 2. resolver el correo
-3. ajustar sizing de png en valores
-4. ajustar sizing de carrusel
-5. menú fijo

@@ -1912,6 +1912,9 @@ pre code {
   .table-responsive-lg > .table-bordered {
     border: 0;
   }
+}
+
+@media (max-width: 1199px) {
   .medal {
     display: none;
   }
@@ -4331,6 +4334,11 @@ input[type="button"].btn-block {
     position: fixed;
     top: 0;
   }
+
+  .navbar-expand-lg {
+    max-width: 960px;
+    margin: 0 0;
+  }
 }
 
 .navbar {
@@ -4343,18 +4351,44 @@ input[type="button"].btn-block {
 }
 
 .navbar-expand-lg {
-  max-width: 1140px;
+  max-width: 100%;
   margin: 0 auto;
-}
-
-.navbar-expand-lg.fixed {
+  padding: 0 15px;
+ }
+ 
+ .navbar-expand-lg.fixed {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1140px;
+  left: 0;
+  right: 0;
+  transform: none;
+  width: 100%;
   z-index: 1000;
-}
+ }
+ 
+ @media (min-width: 992px) {
+  .navbar-expand-lg {
+    max-width: 960px;
+    margin-bottom: 0;
+  }
+  
+  .navbar-expand-lg.fixed {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 960px;
+  }
+ }
+ 
+ @media (min-width: 1200px) {
+  .navbar-expand-lg {
+    max-width: 1140px;
+  }
+  
+  .navbar-expand-lg.fixed {
+    width: 1140px;
+  }
+ }
+ 
 
 .navbar .container,
 .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl {
@@ -6617,7 +6651,10 @@ a.close.disabled {
 
 .green-line {
   background-color: #137c79;
+  height: 5px;
 }
+
+
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,

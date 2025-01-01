@@ -193,19 +193,30 @@ window.addEventListener('scroll', function() {
     }
   });
 
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    fetch(this.action, {
-      method: 'POST',
-      body: new FormData(this)
-    })
-    .then(() => {
-      $('#contactModal').modal('hide');
-      this.reset();
-    setTimeout(function() { 
-        $('#contactModal').modal('hide');
-      }, 500);
-      
+  $(document).ready(function() {
+    $('#contactModal').on('shown.bs.modal', function() {
+      $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+        fetch(this.action, {
+          method: 'POST',
+          mode: 'cors', // Añadido
+          headers: {
+            'Accept': 'application/json' // Añadido
+          },
+          body: new FormData(this)
+        })
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          $('#contactModal').modal('hide');
+          this.reset();
+          alert('Mensaje enviado correctamente');
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Hubo un problema al enviar el mensaje. Inténtalo de nuevo.');
+        });
+      });
+    });
   });
   
 })(jQuery);

@@ -1,2 +1,3 @@
 con el inicio
-1. Arreglar la green line
+1. añadir más reseñas de haber
+2. poner el video de presentación

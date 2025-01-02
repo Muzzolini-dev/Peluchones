@@ -178,7 +178,12 @@ console.log(now_string);
 document.addEventListener("DOMContentLoaded", (event) => {
     const fecha = document.getElementById("fecha");
     const now = new Date();
-    const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+    const options = { 
+        weekday: 'short',  // Full day name
+        day: '2-digit',   // Day as number without leading zero
+        month: '2-digit',    // Full month name
+        year: 'numeric'   // Full year
+    };
     fecha.innerText = now.toLocaleDateString('es-ES', options);
   });
     
@@ -218,6 +223,73 @@ window.addEventListener('scroll', function() {
       });
     });
   });
-  
+
+// Obtener los botones que abren el modal
+var btns = document.getElementsByClassName("portfolio-btn");
+
+// Recorrer todos los botones y agregar el evento click
+for (var i = 0; i < btns.length; i++) {
+  btns[i].onclick = function(e) {
+    e.preventDefault();
+    var modalId = this.getAttribute("href").substring(1); // Obtener el ID del modal
+    var modal = document.getElementById(modalId); // Obtener el modal correspondiente
+    modal.style.display = "block";
+    modal.querySelector(".polaroid-header h2").innerHTML = this.getAttribute("data-name");
+    modal.querySelector(".polaroid-image").src = this.parentElement.querySelector("img").src;
+    modal.querySelector(".polaroid-footer h5").innerHTML = this.getAttribute("data-description");
+
+    // Obtener el elemento <span> que cierra el modal
+    var span = modal.getElementsByClassName("close")[0];
+
+    // Cuando el usuario hace clic en <span> (x), cierra el modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // Cuando el usuario hace clic fuera del modal, ciérralo
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
+
+  $(".photo-carousel").owlCarousel({
+    center: true,
+    items: 3,
+    loop: true,
+    margin: 30,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    nav: true,
+    navText: [
+        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+    ],
+    responsive: {
+        0: {
+            items: 1,  // Cambiamos de 0 a 1 para móviles
+            center: true,
+            touchDrag: true,
+            mouseDrag: true,
+            nav: true
+        },
+        576: {
+            items: 1
+        },
+        768: {
+            items: 2
+        },
+        960: {
+            items:2
+        },
+        1200: {
+            items:3
+        },
+    }
+    
+});
+
+};
 })(jQuery);
 

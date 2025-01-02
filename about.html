@@ -44,6 +44,7 @@
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
+                        <div class="fecha" id="fecha"></div>
                         <a class="text-white px-3" href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank">
                             <i class="fab fa-instagram  fa-lg" title="Instagram"></i>
                         </a> 
@@ -56,7 +57,7 @@
                             <i class="fab fa-spotify fa-lg" title="Spotify"></i>
                         </a>
 
-                        <a class="text-white px-3" href="" target="_blank">
+                        <a class="text-white px-3" href="#" data-toggle="modal" data-target="#contactModal">
                             <i class="fa fa-envelope fa-lg" title="Contact"></i>
                         </a>
 
@@ -70,221 +71,430 @@
     </div>
     <!-- Topbar End -->
 
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="contactForm" action="https://formspree.io/f/myzzdqvl" method="POST">
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Tu email" required>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+       </div>
 
     <!-- Navbar Start -->
-    <div class="container-fluid green-line position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
-                    <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link" title="Página principal">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link active" title="Conócenos">Compawñeras</a>
-                        <a href="paper.html" class="nav-item nav-link" title="Artículos">Huella Actual</a>
-                    </div>
-                    <a href="index.html" class="navbar-brand mx-1 d-none d-lg-block">
-                        <img src="images/titulo.png" class="m-1 img-fluid text-primary">
+    <div class="navbar-wrapper">
+        <div class="container-fluid green-line position-relative nav-bar navbar-container p-0">
+            <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
                     </a>
-                    <div class="navbar-nav mr-auto py-0">
-                        <a href="video.html" class="nav-item nav-link" title="Videos">Paticaliente</a>
-                        <a href="gallery.html" class="nav-item nav-link" title="Fotografías">Siete Vidas</a>
-                        <a href="podcast.html" class="nav-item nav-link" title="Podcast">Olfateando Información</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="index.html" class="nav-item nav-link" title="Página principal">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link active" title="Conócenos">Compawñeras</a>
+                            <a href="paper.html" class="nav-item nav-link" title="Artículos">Huella Actual</a>
+                        </div>
+                        <a href="index.html" class="navbar-brand mx-1 d-none d-lg-block">
+                            <img src="images/titulo.png" class="m-1 img-fluid text-primary d-none d-xl-block">
+                            <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary d-xl-none">
+                        </a>
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="video.html" class="nav-item nav-link" title="Videos">Paticaliente</a>
+                            <a href="gallery.html" class="nav-item nav-link" title="Fotografías">Siete Vidas</a>
+                            <a href="podcast.html" class="nav-item nav-link" title="Podcast">Olfateando Información</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
     </div>
     <!-- Navbar End -->
 
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
-        <div class="container text-center py-5">
-            <h1 class="text-white display-3 mt-lg-5">About</h1>
-            <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="">Home</a></p>
-                <i class="fa fa-circle px-3"></i>
-                <p class="m-0">About</p>
+
+   <!-- Carousel Start -->
+   <div class="container-fluid p-0 mb-0 pb-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active d-flex flex-column align-items-center justify-content-start">
+                <img class="w-90" src="images/compawñeras/compawñeras+.jpg" alt="Image">
+                <div class="about-caption text-compawñeras d-flex flex-column align-items-center justify-content-start">
+                    
+                        <h1 class="display-3 text-compawñeras text-beige">Compawñeras</h1>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+</div>
 
-
-    <!-- About Start -->
+<section id="reviews">
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <h1 class="section-title position-relative text-center mb-5">Traditional & Delicious Ice Cream Since 1950</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 py-5">
-                    <h4 class="font-weight-bold mb-3">About Us</h4>
-                    <h5 class="text-muted mb-3">Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed vero dolor sea</h5>
-                    <p>Takimata sed vero vero no sit sed, justo clita duo no duo amet et, nonumy kasd sed dolor eos diam lorem eirmod. Amet sit amet amet no. Est nonumy sed labore eirmod sit magna. Erat at est justo sit ut. Labor diam sed ipsum et eirmod</p>
-                    <a href="" class="btn btn-secondary mt-2">Learn More</a>
-                </div>
-                <div class="col-lg-4" style="min-height: 400px;">
-                    <div class="position-relative h-100 rounded overflow-hidden">
-                        <img class="position-absolute w-100 h-100" src="img/about.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-4 py-5">
-                    <h4 class="font-weight-bold mb-3">Our Features</h4>
-                    <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor</p>
-                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h5>
-                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h5>
-                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h5>
-                    <a href="" class="btn btn-primary mt-2">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-
-    <!-- Team Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row">
                 <div class="col-lg-6">
-                    <h1 class="section-title position-relative mb-5">Experienced & Most Famous Ice Cream Chefs</h1>
+                    <h1 class="section-title position-relative text-center mb-5">Nuestro Proyecto</h1>
                 </div>
-                <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="owl-carousel team-carousel">
-                        <div class="team-item">
-                            <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="img/team-1.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
-                                <div class="d-flex justify-content-center pt-1">
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="img/team-2.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
-                                <div class="d-flex justify-content-center pt-1">
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="img/team-3.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
-                                <div class="d-flex justify-content-center pt-1">
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="img/team-4.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
-                                <div class="d-flex justify-content-center pt-1">
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <h4 class="font-weight-light mb-4">Somos cuatro estudiantes de último curso de Periodismo de la Universidad de Zaragoza. Hemos creado este proyecto con la intención de educarnos sobre el tema del abandono animal para poder transmitir de la forma más objetiva y veraz la información que nos encontramos en nuestras investigaciones y visitas a las diferentes organizaciones que se relacionan de una u otra forma con ellos. </h4>
+                        <img class="w-75" src="images/compawñeras/compawñeras-2.jpg" alt="">
+                        <h5 class="font-weight-bold m-0"></h5>
+                        <span>Mariangel, Inés, Zoe y María</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Team End -->
+</section> 
+
+<section class="zigzag-section">
+    <div class="zigzag-container">
+        <!-- Bloque 1 -->
+        <div class="zigzag-block">
+            <div class="zigzag-content left">
+                <div class="text-content">
+                    <h2 class="zigzag-title">¿Qué somos?</h2>
+                    <p class="zigzag-text">El proyecto de comunicación digital “Peluchones” se centra en la difusión de información sobre la situación de las mascotas abandonadas en Aragón. Además de ofrecer un punto de vista profesional bajo el escrudiño periodístico de las integrantes del equipo. Queremos incluir como propuesta de valor “protagonizar a los refugios y protectoras”</p>
+                </div>
+            </div>
+            <div class="zigzag-image right">
+                <img src="images/logo.png" alt="Descripción 1">
+            </div>
+        </div>
+
+        <!-- Bloque 2 -->
+        <div class="zigzag-block reverse">
+            <div class="zigzag-image reverse">
+                <img src="images/compawñeras/mision.png" alt="Descripción 2">
+            </div>
+            <div class="zigzag-content right">
+                <div class="text-content reverse">
+                    <h2 class="zigzag-title">Misión</h2>
+                    <p class="zigzag-text">Ofrecer información actual, contrastada y de calidad sobre la situación legal de los animales en España y la realidad de los refugios y protectoras de animales domésticos en Aragón.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque 3 -->
+        <div class="zigzag-block">
+            <div class="zigzag-content left">
+                <div class="text-content">
+                    <h2 class="zigzag-title">Visión</h2>
+                    <p class="zigzag-text">Dentro de tres años “Peluchones” se ve siendo un referente en la difusión de información veraz sobre la situación de protectoras y refugios de animales domésticos en Aragón. En tres años el acceso a una web que unifique todo el contexto de animales refugiados en Aragón será más sencillo a la actualidad de 2024.</p>
+                </div>
+            </div>
+            <div class="zigzag-image">
+                <img src="images/compawñeras/vision.png" alt="Descripción 3">
+            </div>
+        </div>
+
+        <!-- Bloque 4 -->
+        <div class="zigzag-block reverse">
+            <div class="zigzag-image reverse">
+                <img src="images/compawñeras/valores.png" alt="Descripción 4">
+            </div>
+            <div class="zigzag-content right">
+                <div class="text-content reverse">
+                    <h2 class="zigzag-title">Valores</h2>
+                    <p class="zigzag-text">En Peluchones nos acercamos a la realidad del abandono y el maltrato animal en Aragón. Para ello, procuramos contrastar y actualizar nuestras informaciones para ofrecer un aporte intelectual como medio. 
+                        Evitamos prácticas engañosas como el “clickbait” y apostamos por un trabajo fundamentado en la honestidad a fin de obtener un producto de calidad. 
+                        
+                        Nuestro proyecto está elaborado por periodistas, es decir, sigue una deontología periodística. Además, nos apoyamos en valores como la solidaridad y la justicia en la realización de todos nuestros trabajos. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="gallery">
+    <div class="container-fluid my-5 py-5 px-0">
+      <div class="row justify-content-center m-0">
+        <div class="col-lg-5">
+          <h1 class="section-title position-relative text-center mb-5">Nuestro Equipo</h1>
+        </div>
+      </div>
+      <div class="row g-0 about-pic-container portfolio-container">
+        <div class="col-lg-6 col-md-6 p-0 about-pic-item portfolio-item">
+          <div class="position-relative overflow-hidden">
+            <img class="img-fluid w-100" src="images/compawñeras/mariangel-com.jpg" alt="Mariangel Barra">
+            <a class="portfolio-btn text-portfolio" href="#mariModal" data-name="Mariangel Barra" data-description="Jefa de RR. SS., camarógrafa, fotógrafa, locutora y editora.">
+              <p class="text-portfolio">Mariangel Barra</p>
+            </a>
+          </div>
+        </div>
+        <!-- Añade más elementos portfolio-item aquí -->
+        <div class="col-lg-6 col-md-6 p-0 about-pic-item portfolio-item">
+            <div class="position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="images/compawñeras/zoe-com.jpg" alt="Zoe Rubio">
+              <a class="portfolio-btn text-portfolio" href="#zoeModal" data-name="Zoe Rubio" data-description="Productora, locutora, redactora y editora.">
+                <p class="text-portfolio">Zoe Rubio</p>
+              </a>
+            </div>
+          </div>
+        <div class="col-lg-6 col-md-6 p-0 about-pic-item portfolio-item">
+            <div class="position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="images/compawñeras/maria-com.jpg" alt="Maria Ondo">
+              <a class="portfolio-btn text-portfolio" href="#mariaModal" data-name="Maria Ondo" data-description="Jefa de redacción, locutora y editora.">
+                <p class="text-portfolio">María Bikie Ondo</p>
+              </a>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 p-0 about-pic-item portfolio-item">
+            <div class="position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="images/compawñeras/ines-com.jpg" alt="Inés Díaz">
+              <a class="portfolio-btn text-portfolio" href="#inesModal" data-name="Inés Díaz" data-description="Redactora, cámarografa, locutora y editora.">
+                <p class="text-portfolio">Inés Díaz</p>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Portfolio Modal -->
+  <div id="mariModal" class="modal-ind">
+    <div class="modal-content-ind">
+      
+      <div class="polaroid">
+        <div class="polaroid-header">
+            <span class="close">&times;</span>
+          <h2>Mariangel Barra</h2>
+        </div>
+        <img id="portfolioImage" class="polaroid-image" src="images/compawñeras/mariangel-com.jpg" alt="Portfolio Image">
+        <div class="polaroid-footer">
+          <h5>Jefa de RR. SS., Camarógrafa, Fotógrafa, Locutora y Editora</h5>
+          <p>Gracias a la carrera de Periodismo, Mariangel ha descubierto su pasión por los audiovisuales. Por ello, ha plasmado todos sus conocimientos en la producción de los diferentes elementos visuales que se encuentran en este proyecto. Además, se ha encargado de organizar y dirigir las publicaciones creadas para nuestras redes sociales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="zoeModal" class="modal-ind">
+    <div class="modal-content-ind">
+      
+      <div class="polaroid">
+        <div class="polaroid-header">
+            <span class="close">&times;</span>
+          <h2>Zoe Rubio</h2>
+        </div>
+        <img id="portfolioImage" class="polaroid-image" src="images/compawñeras/zoe-com.jpg" alt="Portfolio Image">
+        <div class="polaroid-footer">
+          <h5>Productora, locutora, redactora y editora.</h5>
+          <p>Apasionada de los deportes, especialmente los de motor, Zoe se ha especializado en dicha rama del periodismo para convertir su amor por el vroom vroom en su propio trabajo. En Peluchones ha trasladado todo su conocimiento para organizar, contactar y planificar las entrevistas, visitas y proyectos que hemos realizado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="mariaModal" class="modal-ind">
+    <div class="modal-content-ind">
+      
+      <div class="polaroid">
+        <div class="polaroid-header">
+            <span class="close">&times;</span>
+          <h2>María Bikie Ondo</h2>
+        </div>
+        <img id="portfolioImage" class="polaroid-image" src="images/compawñeras/maria-com.jpg" alt="Portfolio Image">
+        <div class="polaroid-footer">
+          <h5>Jefa de redacción, locutora y editora.</h5>
+          <p>Interesada por la comunicación corporativa, su vena periodística ha sido vital para la redacción de los diferentes guiones que se ha estado implementando para los contenidos del proyecto y redes sociales. Además, su creatividad a la hora de pensar nuevos temas ha abierto puertas para todo el equipo.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="inesModal" class="modal-ind">
+    <div class="modal-content-ind">
+      
+      <div class="polaroid">
+        <div class="polaroid-header">
+            <span class="close">&times;</span>
+          <h2>Inés Díaz</h2>
+        </div>
+        <img id="portfolioImage" class="polaroid-image" src="images/compawñeras/ines-com.jpg" alt="Portfolio Image">
+        <div class="polaroid-footer">
+          <h5>Redactora, cámara, locutora y editora.</h5>
+          <p>Con el micrófono siempre en la mano, Inés ha sido todoterreno en el proceso de creación del proyecto. Al igual que Mariangel, su gusto y conocimiento por el audiovisual ha permitido que el proyecto brille por su calidad y enfoque periodístico, a la vez que estético y visual. </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+  <div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="title-container d-flex align-items-center justify-content-center">
+                    <h1 class="section-title position-relative text-center">Compawñeras en acción</h1>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel photo-carousel">
+            <!-- Repite este div para cada foto -->
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion0.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion1.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion2.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion3.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion4.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion5.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion6.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion7.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion8.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion9.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion10.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion11.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion12.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion13.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion14.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion15.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion16.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion17.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion18.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion19.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion20.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion21.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion22.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion23.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion24.jpg" alt="Descripción 1">
+            </div>
+            <div class="carousel-item-custom">
+                <img src="images/compawñeras/accion25.jpg" alt="Descripción 1">
+            </div>
+            <!-- ... más items ... -->
+        </div>
+    </div>
+</div>
+
+   <!-- Footer Start -->
+   <section id="footer">
+    <div class="container-fluid footer py-5">
         <div class="container text-center py-5">
             <div class="row">
                 <div class="col-12 mb-4">
                     <a href="index.html" class="navbar-brand m-0">
-                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">i</span>CREAM</h1>
+                        <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
                     </a>
                 </div>
                 <div class="col-12 mb-4">
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://m.youtube.com/@ProyectoPeluchones" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://open.spotify.com/show/4SGNU4GltaoeoVg5ruIvL3" target="_blank"><i class="fab fa-spotify fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social" href="https://www.tiktok.com/@proyectopeluchones" target="_blank"><i class="fab fa-tiktok fa-lg"></i></a>
                 </div>
                 <div class="col-12 mt-2 mb-4">
                     <div class="row">
                         <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
-                            <h5 class="font-weight-bold mb-2">Get In Touch</h5>
-                            <p class="mb-2">123 Street, New York, USA</p>
-                            <p class="mb-0">+012 345 67890</p>
+                            <h5 class="font-weight-bold mb-2"></h5>
                         </div>
                         <div class="col-sm-6 text-center text-sm-left">
-                            <h5 class="font-weight-bold mb-2">Opening Hours</h5>
-                            <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
-                            <p class="mb-0">Sunday: Closed</p>
+                            <h5 class="font-weight-bold mb-2"></h5> 
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
-                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    <h5 class="font-weight-bold mb-2">Correo de Contacto</h5>
+                    <h5 class="font-weight-light mb-2" ><a href="#" data-toggle="modal" data-target="#contactModal">peluchonespeludones@gmail.com</a></h5><br>
+                    <p class="m-0">&copy; <a href="#"></a>En colaboración con: <a href="https://muzzolinidev.com" target="_blank"> Muzzolini Dev</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</section>
+<!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,7 @@
 con el inicio
-1. añadir más reseñas de haber
 2. poner el video de presentación
+
+global(mañana)
+1. arreglar el cursor
+2. botones de compartir
+3. títulos-enlace en el inicio

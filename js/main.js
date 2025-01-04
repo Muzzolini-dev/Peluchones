@@ -139,6 +139,38 @@
         }
     });
 
+     // Product carousel
+     $(".paper-carousel").owlCarousel({
+        autoplay: false,
+        smartSpeed: 1500,
+        margin: 20,
+        dots: false,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:3
+            },
+            1400:{
+                items:3
+            }
+        }
+    });
+
+
 
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
@@ -184,7 +216,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         month: '2-digit',    // Full month name
         year: 'numeric'   // Full year
     };
-    fecha.innerText = now.toLocaleDateString('es-ES', options);
+    let dateString = now.toLocaleDateString('es-ES', options);
+    
+    // Insert a '.' after the weekday and before the comma
+    dateString = dateString.replace(/(\w+),/, '$1.,');
+    
+    fecha.innerText = dateString;
   });
     
 window.addEventListener('scroll', function() {
@@ -290,6 +327,6 @@ for (var i = 0; i < btns.length; i++) {
     
 });
 
-};
+}
 })(jQuery);
 

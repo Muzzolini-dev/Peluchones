@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Proyecto Peluchones - Artículos</title>
+    <title>Proyecto Peluchones - Conócenos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -44,6 +44,7 @@
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
+                        <div class="fecha" id="fecha"></div>
                         <a class="text-white px-3" href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank">
                             <i class="fab fa-instagram  fa-lg" title="Instagram"></i>
                         </a> 
@@ -56,7 +57,7 @@
                             <i class="fab fa-spotify fa-lg" title="Spotify"></i>
                         </a>
 
-                        <a class="text-white px-3" href="" target="_blank">
+                        <a class="text-white px-3" href="#" data-toggle="modal" data-target="#contactModal">
                             <i class="fa fa-envelope fa-lg" title="Contact"></i>
                         </a>
 
@@ -70,225 +71,534 @@
     </div>
     <!-- Topbar End -->
 
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="contactForm" action="https://formspree.io/f/myzzdqvl" method="POST">
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Tu email" required>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+       </div>
 
     <!-- Navbar Start -->
-    <div class="container-fluid green-line position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
-                    <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link " title="Página principal">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link" title="Conócenos">Compawñeras</a>
-                        <a href="paper.html" class="nav-item nav-link active" title="Artículos">Huella Actual</a>
-                    </div>
-                    <a href="index.html" class="navbar-brand mx-1 d-none d-lg-block">
-                        <img src="images/titulo.png" class="m-1 img-fluid text-primary">
+    <div class="navbar-wrapper">
+        <div class="container-fluid green-line position-relative nav-bar navbar-container p-0">
+            <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
                     </a>
-                    <div class="navbar-nav mr-auto py-0">
-                        <a href="video.html" class="nav-item nav-link" title="Videos">Paticaliente</a>
-                        <a href="gallery.html" class="nav-item nav-link" title="Fotografías">Siete Vidas</a>
-                        <a href="podcast.html" class="nav-item nav-link" title="Podcast">Olfateando Información</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="index.html" class="nav-item nav-link" title="Página principal">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link" title="Conócenos">Compawñeras</a>
+                            <a href="paper.html" class="nav-item nav-link active" title="Artículos">Huella Actual</a>
+                        </div>
+                        <a href="index.html" class="navbar-brand mx-1 d-none d-lg-block">
+                            <img src="images/titulo.png" class="m-1 img-fluid text-primary d-none d-xl-block">
+                            <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary d-xl-none">
+                        </a>
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="video.html" class="nav-item nav-link" title="Videos">Paticaliente</a>
+                            <a href="gallery.html" class="nav-item nav-link" title="Fotografías">Siete Vidas</a>
+                            <a href="podcast.html" class="nav-item nav-link" title="Podcast">Olfateando Información</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
     </div>
     <!-- Navbar End -->
 
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
-        <div class="container text-center py-5">
-            <h1 class="text-white display-3 mt-lg-5">Product</h1>
-            <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="">Home</a></p>
-                <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Product</p>
+
+   <!-- Carousel Start -->
+   <div class="container-fluid p-0 mb-0 pb-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active d-flex flex-column align-items-center justify-content-start">
+                <img class="w-90" src="images/huella/am-seccion.jpg" alt="Image">
+                <div class="about-caption text-compawñeras d-flex flex-column align-items-center justify-content-start">
+                    
+                        <h1 class="display-3 text-compawñeras text-beige">Huella Actual</h1>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+</div>
 
-
-    <!-- Products Start -->
+<section id="description-beige">
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <h1 class="section-title position-relative text-center mb-5">Best Prices We Offer For Ice Cream Lovers</h1>
+                    <h1 class="section-title position-relative text-center mb-5">Nuestra sección de <span class="orange-text">Artículos</span></h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-1.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <h4 class="font-weight-light mb-4">Huella Actual es nuestra sección escrita, en la que podrás encontrar diversos reportajes, noticias y entrevistas para profundizar mejor en los temas animales que están en tendencia.</h4>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-2.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-3.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-4.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-5.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-1.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-2.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-3.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-12 text-center">
-                    <a href="" class="btn btn-primary py-3 px-5">Load More</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Products End -->
+</section> 
+
+<section id="papers">
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative mb-5">Artículos</h1>
+                </div>
+                <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel paper-carousel">
+                        <div class="product-item paper-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0"></h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3">
+                                <img class="rounded-circle w-100 h-100" src="images/noticia-bu.jpg">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">"Para mí es mi niña y es mi compañera de vida" <br></h5>
+                            <p class="descriptive-paper">A los 79 años María José Polo vive con su perrita Matilda. Asegura que le ayuda a afrontar la soledad de la vejez. En este reportaje breve profundizamos acerca del problema actual que existe en España entorno a la soledad no deseada y sus consecuencias para las personas mayores, utilizando como paliativo tener mascotas, aumentando la posibilidad de hogar para los animales y la compañía de las personas envejecidas.</p>
+                            <a href="#compañera-de-vida" class="btn-paper modal-trigger btn btn-secondary">Leer</a>
+                        </div>
+                        <div class="product-item paper-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0"></h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" >
+                                <img class="rounded-circle w-100 h-100" src="images/noticia-maria.jpg">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">El abandono animal en un contexto de sacrificio cero <br></h5>
+                            <p class="descriptive-paper">En este reportaje breve abordamos la política de sacrificio cero. Hasta 2023, en la comunidad de Aragón estaba permitido que los animales domésticos fueran sacrificados en caso de ‘sobrepoblación’. La puesta en marcha de la ley animal estatal de 2023 ha supuesto la luz verde de la política sacrificio cero.</p>
+                            <a href="#abandono-animal-sacrificio-cero" class="btn-paper btn btn-sm btn-secondary">Leer</a>
+                        </div>
+                        <div class="product-item paper-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0"></h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3">
+                                <img class="rounded-circle w-100 h-100" src="images/noticia-ines.jpg">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Los abandonos de gatos llegada de la Navidad <br></h5>
+                            <p class="descriptive-paper">En este artículo reflexionaremos sobre la visión generalizada de las mascotas como regalo y las consecuencias que tiene en fechas como la navidad. Aunque la legislación protege a los animales, asociaciones como Proyecto Gato subrayan que el cambio real comienza con la educación y la adopción responsable. Regalar un animal implica un compromiso a largo plazo, y en este artículo destacaremos la importancia de erradicar esta percepción.</p>
+                            <a href="#abandono-gatos-navidad" class="btn-paper btn btn-sm btn-secondary">Leer</a>
+                        </div>
+                        <div class="product-item paper-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0"></h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" >
+                                <img class="rounded-circle w-100 h-100" src="images/entrevista-maria.png">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Entrevista Lorena Palacios: Conociendo el valor de la alimentación <br></h5>
+                            <p class="descriptive-paper">En esta entrevista conversamos con Lorena Palacios, actualmente propietaria de Kukura Cooks. Se trata de una iniciativa gastronómica de repostería para personas y animales domésticos. En esta entrevista profundizamos sobre cómo la alimentación puede ser un factor determinante en el maltrato animal.</p>
+                            <a href="#entrevista-lorena-palacios" class="btn-paper btn btn-sm btn-secondary">Leer</a>
+                        </div>
+                        <div class="product-item paper-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0"></h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" >
+                                <img class="rounded-circle w-100 h-100" src="images/noticia-zoe.jpg">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Los hogares aragoneses tienen más mascotas que niños</h5>
+                            <p class="descriptive-paper">En este artículo descubrimos una tendencia de la sociedad actual: tener mascotas antes que hijos. A continuación, indagamos por algunos de los porqués de esta decisión por la que llevan años decantándose las familias aragonesas</p>
+                            <a href="#mas-mascotas-que-niños" class="btn-paper btn btn-sm btn-secondary">Leer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Modal 1-->
+<div id="compañera-de-vida" class="modal-paper">
+    <div class="modal-content-paper">
+        <div class="paper">
+            <div class="paper-header">
+                <h6>Autora: Mariangel Barra</h6><br>
+                <a class="close-paper" href="#papers">&times;</a>
+            </div>
+            <div class="paper-title">
+                <h2>“Para mí es mi niña y es mi compañera de vida”</h2><br>
+                <h4>A los 79 años María José Polo vive con su perrita Matilda. Asegura que le ayuda a afrontar la soledad de la vejez</h4><br>
+            </div>
+            <img id="portfolioImage" class="paper-image" src="images/huella/mjm-portada.jpg" alt="Portfolio Image">
+            <p class="pie-foto">María José Polo, persona mayor de 79 años, con su perrita Matilda. / Mariangel Barra Navas.</p>
+            <div class="paper-footer">
+            <p>María José Polo tiene 79 años, vive sola y tiene una pequeña perrita llamada Matilda de 12 años que saca a pasear en cochecito
+                 debido a los problemas de salud de su mascota. Afirma que a veces la miran extrañados, sin embargo, <b>asegura que Matilda es uno de los
+                  pilares de su vida</b>: “Con Mati yo no me siento sola. Para mí es mi niña y es mi compañera de vida. Y, el día que nos marchemos una o las
+                  dos, ¿verdad? Pues las dos”.<br><br> 
+                Polo es muy activa, participa como voluntaria en Amigos de los Mayores y canta jota. <b>Gracias a Matilda no siente la soledad de su hogar
+                 vacío</b>: “Ella ha tenido mucha suerte conmigo y yo con ella, no te puedes imaginar. Porque es que cuando llegas por la puerta, y pega dos
+                  brincos al verte, te hace sentir que nunca estás sola. Yo es que no sé cómo los abandonan, de verdad. Me entran ganas de llorar. Porque
+                   es que cuanto más conoces a los animales, más cuenta te das de cómo la gente puede ser tan cruel”, lamenta Polo.<br><br>
+                <b>La soledad como amenaza</b><br>
+                España es uno de los países de la Unión Europea que se enfrenta al veloz aumento de la población envejecida. <b>Según el 
+                    <a href="https://www.ine.es/dyngs/Prensa/PROP20242074.htm" target="_blank">Instituto Nacional
+                 de Estadística</a> en 30 años, <a href="https://www.ine.es/prodyser/demografia_UE/bloc-1c.html?lang=es" target="_blank">3 de cada 10 personas 
+                    tendrán 65 años o más.</a></b> 
+                 Por ello la soledad no deseada es una de las grandes amenazas.
+                  <b>Para Laura Soriano, técnico social de la asociación en la que Polo participa</b>: “El no tener contacto con el entorno produce que se aíslen.
+                   Y cuando una persona se aísla, no sale a comprar, a dar un paseo, a la calle, pues eso a nivel de salud mental, a nivel de depresión,
+                    incluso a nivel somático físico, con todas las enfermedades que tenga diagnosticadas, crónicas o graves, pues le afecta también”. 
+                <b>La compañía en soledad</b>
+                Debido a esto, una posible solución que se está volviendo frecuente en las personas mayores es buscar la compañía de una mascota. <b>Albert
+                 Quiles, psicólogo y presidente de Amigo de los Mayores, explica que puede darles un empujón positivo a aquellas personas en soledad</b>: “Tiene
+                  beneficios claros hacia la persona mayor porque no solamente es el afecto que se recibe por parte de un animal, sino que también lo que es
+                   el hecho de ocuparte, de que tienes que sacarlo, darle de comer y, por tanto, tienes una situación de responsabilidad”.</p><br>
+                   <img id="portfolioImage" class="paper-image second-image" src="images/noticia-bu.jpg" alt="Portfolio Image"><br>
+                   <p><b>Iniciativas que salvan vidas</b><br>
+                   Polo es una de las personas mayores que viven con mascota en nuestro país donde surgen además iniciativas que promueven su adopción. <b>El
+                    Ayuntamiento de Zaragoza realizó una acción en la Casa Amparo en 2012 y 2014</b> para que 
+                    <a href="https://www.heraldo.es/noticias/aragon/zaragoza/2012/03/22/perros-adoptados-acompanaran-ancianos-zaragoza-181229-2261126.html" target="_blank">
+                    los ancianos interactuaran con mascotas promoviendo al mismo tiempo su adopción.</a> Esto <a href="https://www.zaragoza.es/sede/servicio/noticia/220848"
+                    target="_blank">deja la puerta abierta para las personas que necesitan compañía y las mascotas un hogar.</a></p>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal 2 -->
+<div id="abandono-animal-sacrificio-cero" class="modal-paper">
+    <div class="modal-content-paper">
+        <div class="paper">
+            <div class="paper-header">
+                <h6>Autora: Maria Bikie Ondo</h6><br>
+                <a class="close-paper" href="#papers">&times;</a>
+            </div>
+            <div class="paper-title">
+                <h2>El abandono animal en un contexto de sacrificio cero</h2>
+                <h4></h4><br>
+            </div>
+            <img id="portfolioImage" class="paper-image" src="images/noticia-maria.jpg" alt="Portfolio Image">
+            <p class="pie-foto">2 gatos en la Asociación Protectora 4 Gatos y Tú. / Mariangel Barra.</p>
+            <div class="paper-footer">
+            <p>La entrada en vigor de la <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2023-7936" target="_blank">
+                Ley de Bienestar Animal</a> en 2023 ha supuesto el aumento 
+                de abandonos según la vicepresidenta de la Sección de Defensa de los Derechos de 
+                los Animales del Real e Ilustre Colegio de Abogados de Zaragoza, <a href="https://www.gemacalahorra.com/index.html" target="_blank">
+                Gema Calahorra.</a> Además, añade que exigencias como el seguro de responsabilidad civil supusieron 
+                un leitmotiv para que varios propietarios abandonaran sus mascotas. En palabras 
+                del estudio más reciente <a href="https://www.fundacion-affinity.org/juntos-crecemos-mejor/el-nunca-lo-haria-no-lo-abandones" target="_blank">
+                “Él nunca lo haría”</a> de la Fundación Affinity, “el abandono es un problema de bienestar y calidad de vida animal”.<br><br>
+                <b>Más perros y gatos que menores de 14 años en Aragón</b><br>
+                Si bien la cifra de animales en Aragón que contabiliza la RIACA con más de 250.000 perros
+                 y gatos no supone “superpoblación animal”, hay una tendencia clara en la comunidad 
+                 aragonesa: <b>hay más perros y gatos que menores de 14 años.</b> Y es que Calahorra expone 
+                 que “el problema es el abandono” ya que con la entrada en vigor de la ley y las 
+                 exigencias como el seguro de responsabilidad civil “se comprobó que llegaron más 
+                 abandonos”. De hecho, el Ministerio de Derechos Sociales, Consumo y Agenda 2030 afirma 
+                 que el abandono es un “reto nacional”. Y por ello presentó el 24 de octubre de 2024 el 
+                 <a href="https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/derechos-sociales-consumo-agenda-2030/Paginas/2024/241024-bustinduy-plan-abandono-animales.aspx" target="_blank">
+                    primer Plan de Acción Estatal contra el Abandono de Animales de Compañía y para el Fomento
+                 de la Adopción.</a><br><br>
+
+                <b>La realidad del sacrificio en la Ley de Bienestar Animal de Aragón</b><br>
+                En Aragón, el sacrificio se recogía como una respuesta a la expiración del ‘plazo’ de un
+                 animal en centros de protección. Lucía Sancho, estudiante de Magisterio Infantil, terminó 
+                 sacrificando a su perro por cuestiones de salud: “Tenía muchas enfermedades y estuvimos 
+                 alargándolo, dándole medicaciones etcétera”. Y Sara Andrade Vela tomó la misma decisión 
+                 una vez el veterinario les dio su opinión profesional y la medicación dejó de tener efecto
+                  en el perro: “Sufría más que disfrutaba la vida”. Desde entonces Lucía Sancho ha vuelto 
+                  a tener otro animal de compañía, pero Andrade expone que no ha vuelto tener mascotas ni
+                   quiere porque fue una decisión muy dura.<br><br> 
+
+                El jefe del servicio de Ordenación, Trazabilidad y Bienestar Animal, José Manuel Corzán Ripol,
+                 ha asegurado que <b>el conteo de animales sacrificados en Aragón no se puede realizar por 
+                 ausencia de datos.</b> A decisión personal, hay núcleos poblacionales que deciden no notificar
+                  el “sacrificio” que hayan podido realizar, lo cual no permite un conteo estable de estos animales.<br><br> 
+
+                <b>¿Superpoblación por sacrificio?</b><br>
+                La reforma de la <b>Ley de Bienestar Animal</b> estatal supuso la unificación del marco 
+                animal en España. Es decir, actualmente se trabaja desde una política “sacrificio cero” 
+                siempre supervisada por un profesional veterinario colegiado. Calahorra aclara que las 
+                leyes autonómicas y ordenanzas municipales no han sido “derogadas”, pero que <b>la entrada 
+                de la ley estatal supone que —actualmente— sea el máximo referente en materia animal en 
+                España.</b>  
+            </p>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal 3-->
+<div id="abandono-gatos-navidad" class="modal-paper">
+    <div class="modal-content-paper">
+        <div class="paper">
+            <div class="paper-header">
+                <h6>Autora: Inés Díaz</h6><br>
+                <a class="close-paper" href="#papers">&times;</a>
+            </div>
+            <div class="paper-title">
+                <h2>Los abandonos de gatos siguen en el punto de mira de las protectoras con la llegada de la Navidad</h2><br>
+                <h4>Los expertos ponen el foco en la responsabilidad particular e insisten en las medidas que pueden ayudar a poner freno más allá del ámbito legislativo.</h4><br>
+            </div>
+            <img id="portfolioImage" class="paper-image" src="images/noticia-ines.jpg" alt="Portfolio Image">
+            <p class="pie-foto">Un gato que ha sido rescatado por Proyecto Gato y permanece en el refugio. / Mariangel Barra.</p>
+            <div class="paper-footer">
+            <p>Las mascotas se regalan en Navidad y se abandonan en verano, una realidad 
+                especialmente preocupante en el caso de los gatos. En 2024, se registraron 
+                <b>115.970 casos de abandono</b> de gatos en España. Según el informe <a href="https://www.fundacion-affinity.org/observatorio/infografia-el-nunca-lo-haria-abandono-adopcion-perros-gatos-espana-2024" target="_blank">
+                “Él nunca lo haría”</a> de la Fundación Affinity, los datos apenas han variado 
+                respecto al año anterior. Aunque las reformas legales recientes, como la del 
+                <a href="https://www.cartv.es/aragonnoticias/aragon/las-mascotas-ya-son-seres-sintientes-que-cambios-trae-la-nueva-ley-de-bienestar-animal-7433" target="_blank">
+                Código Civil autonómico de 2022</a> y la <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2023-7936" target="_blank">
+                Ley de Bienestar Animal de 2023</a>, reconocen 
+                a los animales como “seres vivos dotados de sensibilidad”, alejándolos de la 
+                categoría de bienes materiales, estas medidas no han <b>logrado</b> frenar la raíz del problema.<br><br>
+                En Teruel, la asociación Proyecto Gato ha ampliado su labor más allá del método 
+                de <b>Captura, Esterilización y Retorno (CER)</b>, usado para controlar colonias felinas.
+                 Ante el aumento de gatos domésticos abandonados, comparten espacio con la 
+                 protectora Amigo Mío, pero la saturación del refugio y la falta de casas de 
+                 acogida complican la situación.<br><br>
+                 “Este ha sido <b>el año con más abandonos en los últimos cuatro años</b>”, ha señalado 
+                 Estefanía Soto, portavoz de Proyecto Gato. Muchas de las camadas abandonadas provienen
+                  de gatas adultas sin esterilizar. Soto ha advertido de la falta de compromiso que reflejan
+                   estas acciones por parte de los propietarios.<br><br>
+                 La esterilización es clave para controlar la sobrepoblación felina y prevenir enfermedades
+                  graves. Según el veterinario Orkatz Fernández, “se castra por salud y para evitar la 
+                  transmisión de virus como el sida felino o la leishmaniosis, que se contagian durante 
+                  el apareamiento y el parto”. Estas medidas, junto con la identificación mediante microchip,
+                  son esenciales para mejorar el <b>bienestar de los animales</b> y combatir el abandono.<br><br>
+                 Un compromiso más allá de la ley<br>
+                 La Ley de Bienestar Animal de 2023 también introduce un periodo de reflexión obligatorio
+                  antes de la compra o adopción de una mascota. En Aragón, la reforma del Código Civil
+                   refuerza la protección jurídica de los animales, otorgándoles <b>derechos particulares</b>
+                    en los casos de herencias o custodias tras un divorcio.><br>
+            </p>
+                    <img id="portfolioImage" class="paper-image second-image" src="images/huella/7v-11.jpg" alt="Portfolio Image">
+                    <span class="pie-foto">Estefanía Soto con uno de los gatos del refugio. / Mariangel Barra.</span><br>
+            <p>
+                Sin embargo, las asociaciones insisten en que el cambio debe ir más allá de lo legislativo.
+                 Persiste un estigma hacia la adopción de gatos adultos, que <a href="https://www.fundacion-affinity.org/observatorio/infografia-el-nunca-lo-haria-abandono-adopcion-perros-gatos-espana-2024" target="_blank">
+                    según la Fundación Affinity</a>, permanecen en refugios hasta tres veces más que los
+                     cachorros. Soto ha recalcado que estos prejuicios son infundados: “Los gatos adultos
+                      tienen personalidades definidas, lo que puede aportar seguridad a un futuro adoptante.
+                       Mucha gente busca cachorros por la foto y no saben lo que conlleva educarlos”.<br><br>
+                <b>Concienciación para un cambio real</b><br>
+                El abandono de mascotas no es solo un problema legal, también es social. La percepción de 
+                los animales como regalos de navidad es una visión a combatir mediante la concienciación 
+                ciudadana y la educación. “Es responsabilidad de todos erradicar la idea de que un animal 
+                es un regalo”, ha concluido Fernández. <b>Los avances legislativos</b> son un buen punto de partida,
+                 pero necesitan ir acompañados de una <b>educación ciudadana efectiva</b> para lograr un impacto real.
+            </p>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal 4-->
+<div id="entrevista-lorena-palacios" class="modal-paper">
+    <div class="modal-content-paper">
+        <div class="paper">
+            <div class="paper-header">
+                <h6>Autora: María Bikie Ondo</h6><br>
+                <a class="close-paper" href="#papers">&times;</a>
+            </div>
+            <div class="paper-title">
+                <h2>Entrevista a Lorena Palacios: Conociendo el Valor de la Alimentación.</h2>
+                <h4></h4><br>
+            </div>
+            <!-- <img id="portfolioImage" class="paper-image" src="images/entrevista-maria.png" alt="Portfolio Image">
+            <p class="pie-foto">Lorena Palacios</p> -->
+            <div class="paper-footer">
+            <p>Lorena Palacios se presenta como una “milenial apasionada por la comido y todo lo que
+                 la rodea” desde que tiene uso de razón. Es la primera persona en su familia que se 
+                 dedica a la restauración y, actualmente, es especialista en Gastromarketing y Food
+                  Designer. Aunque nació en Andorra, sus raíces divergen entre Barcelona y Cinco Olivas.
+                   Pueblo en el que nace Kukura Cooks, una propuesta de pastelería saludable para personas
+                 y mascotas.<br><br>
+                 <b>¿Cómo nace tu interés en esta especialización?</b><br> 
+                Empecé con una doble titulación en Diseño Gráfico y Publicidad con Marketing. Luego en todos los trabajos en los que podía elegir temática siempre optaba por lo gastronómico. Cuando yo estudiaba no había una especialización como tal, pero por casualidades de la vida, en mi último año sí que hubo. Así que decidí incorporarme al año siguiente y a raíz de ahí, pues lo complementé también con Nutrición.<br>
+                Tengo bastante experiencia laboral y, por ejemplo, cuando trabajaba de directora gastronómica para una cadena de hoteles vi que siempre te tienes que adaptar al cliente. Es decir, nunca haces lo que realmente quieres a no ser que tuvieses tu propio sitio. Pero claro, pasa que es súper complicado abrir un sitio actualmente. Así que por eso decidí abrirlo en el pueblo y apostar por que se vendiera online para reducir costes.<br><br>
+
+                <b>¿Y cómo surge Kukura Paws? Tu línea de snacks y pastelería para animales domésticos.</b><br>
+                Pues a ver, me gustan tantísimo que dije “tengo que hacer algo para ellos”. Yo me acuerdo de que siempre llegaba a casa con algún postre para mis padres, venían todos los animales que teníamos a pedirme algo también. Pero claro, yo no les podía dar nada así que de ahí nació esta idea.<br><br>
+
+                <b>¿En qué medida la alimentación puede suponer un riesgo en la salud de los animales de compañía?</b><br> 
+                Yo creo que mucho y las personas no se dan cuenta de lo importante que es, pero ni para sí mismos. Es bastante complicado ya que ahora estamos consiguiendo que las etiquetas sean transparentes y que se diga la verdad en las publicidades. Pero claro, para animales la cosa está mucho más atrasada y peor. <br><br>
+
+                <b>¿Qué dirías que es lo mejor que se puede hacer al respecto?</b><br>
+
+                Pensar que a ellos les pasa lo mismo que nosotros:  si llevas una dieta con falta de algún nutriente, excesos o algún desequilibrio puede resultar en diferentes problemas. Aquí había pensado un ejemplo con la perrita de unos conocidos. Ella siempre comía pienso barato y conforme fue creciendo aparentemente no tenía ninguna afección, simplemente era más mayor. A lo que fueron a hacerle unos análisis su páncreas estaba altamente inflamado y esto iba a repercutir en algo o una muerte en breves. Pues bien, tan solo fue cambiarle la dieta por un piensa más basado en proteína bajo en grasa para que se pusiera mejor.<br><br> 
+
+                <b>¿Entonces la comida industrial tiene el potencial de ser un factor de riesgo?</b><br> 
+                Ahora hay alimento industrial para animales que está mucho mejor que hace unos años. Pero esto es a raíz de que una cierta parte de titulares de animales han demandado que haya una mejora en el producto. Los que han cambiado son muy recientes y serían alrededor del 10% de todo el mercado. Ósea la mayoría yo diría que siguen siendo súper malas y encima son las que más se anuncian. Se han ganado muy buena reputación, pero realmente hay muchas que son malas porque se hacen con ingredientes malos y baratos, basadas en harinas y cereales refinados.<br> 
+                Obviamente cuanto mejor hecho esté, más caro es. Y sé que hay muchísima gente que no quiere invertir tanto en los animales. A mí me parece una pena porque creo que tener una mascota te hace responsable de todo su bienestar, incluido la alimentación.<br><br>
+
+                <b>¿Conoces algún bulo o concepto origen de la desinformación sobre la alimentación de animales de compañía?</b><br><br> 
+                Hay un montón, sobre todo las cosas que se han hecho y se dicen “de toda la vida”.<br> 
+                En mi pueblo (Cinco Olivas) hay muchos gatitos y bueno, en todos lados les dan leche, pero es que eso les va fatal. Los gatos no pueden tomar leche y mucho menos recién nacidos. Entiendo que la gente no lo hace con mala intención, pero en todo caso solo pueden tomar leche sin lactosa porque si no le va a hacer diarreas. También hay ingredientes como la cebolla, el chocolate y algunas frutas que van a dejar unas diarreas mínimo, ya luego puede ir incluso a peor.<br> 
+                De hecho, crepo que estos bulos no solo se quedan en la alimentación, sino también con cómo curar enfermedades como la leishmaniasis. En Cinco Olivas somos zona roja y he llegado a escuchar a gente decir que se puede curar rociando cidronela o vinagre con un spray. Al final, creo que son dichos que les conviene a algunos porque claro, el spray es mucho más barato que un collar antiparasitario.<br><br> 
+
+                <b>¿La alimentación cruda (popularmente denominada “BARF”) frente a la comida preparada presenta algún tipo de beneficio?</b><br>
+                Aquí va a entrar mucho el tema de la especie y la edad porque cambia muchísimo: “Una persona mayor no come lo mismo que un niño”.<br>
+                Una cosa es que sea comida preparada a base de comida fresca, es decir, que esté cocinada. Y otra cosa, es que eso mismo esté crudo. Esto último corre el riesgo de que haya un montón de bacterias como la salmonela o el toxoplasma. Entonces, si al final por darle crudo va a poder aumentar muchísimo el riesgo de de que se enferme, no le veo para nada el sentido. Creo que cocinar la comida es mucho más seguro para el animal que modas como la dieta BARF.<br>
+                Incluso algún veterinario me ha dicho que no solo es lo que coman ellos, sino que quizás no les afecte a ellos, pero se conviertan en transmisores.<br><br> 
+
+                <b>¿Crees que hay suficiente educación en materia de responsabilidad de la alimentación para el bienestar del animal en la comunidad aragonesa?</b> 
+                Ni de broma, pero es que no la hay ni para personas.<br> 
+                Muchas veces hago charlas de nutrición sigo escuchando barbaridades brutales. La más impactante que recuerdo ahora es gente que recomendaba beber vino cada día a pacientes de cáncer. Y claro, si ni si quiera hemos conseguido pasar de estos puntos imagínate para los animales.<br> 
+                Ahora empieza a aumentar el porcentaje de gente preocupada por la nutrición animal, aunque hay más reacios a cambiar y suelen ser personas más mayores. Hay que entender que los animales son seres vivos como nosotros, pero a veces nos estancamos con el dicho de que “es solo un animal” para justificar faltas.<br><br> 
+
+                <b>¿El marketing puede jugar a la desventaja de los propietarios de animales domésticos a la hora de escoger alimentos buenos o malos?</b>
+                ¿Es que el márquetin? Yo siempre lo digo cuando empiezo mis charlas, no sé si te gusta Esto es como Star Wars: podemos utilizar el marketing desde la parte Jedi o la Sith. La mayoría del márquetin se utiliza desde la parte Sith convenciéndote de que las cosas malas son buenas o necesidades.<br> 
+                Yo siempre recomiendo mirar bien la composición de todo, aunque el color y el diseño nos llame la atención.  Sobre todo, mirar un poco la composición y aprender un poquito esas cuatro o tres cosas que hay que mirar para distinguir lo que es bueno y malo. Se nos puede pasar algo si no somos profesionales, pero conocer esas tres cosas es imprescindible.<br><br> 
+
+                <b>¿Cuál es la propuesta de valor de Kukura Kooks?</b><br>
+                Yo al final lo que hago es pastelería. La alimentación base tiene que llevar sus minerales todos los nutrientes equilibrados para raza y edad del animal. Entonces yo quería dar cosas artesanas hechas con ingredientes de calidad como por ejemplo mis galletas. Las harinas que uso son integrales y pueden aportar fibra y minerales a los animales.<br> 
+                Si tengo que hablar de mi propuesta de valor diría que está hecho a mano y no en una cadena, por ejemplo. Y bueno, la gracia es que en el momento que uno se coma una cookie ellos puedan tener su snack también. A mí es que me encanta compartir con mi animal y me parece que mola darle en ese momento su propio aperitivo.<br><br>  
+
+                <b>¿Cuáles serían las claves de una alimentación animal responsable bajo tu punto de vista?</b>
+                Primero, asegurarse que la dieta cubra los nutrientes esenciales y sea completa y lleve. Además, que sea un alimento a la par con la raza, tamaño y actividad del animal. Es decir, tenemos que saber cuánto y qué han comido o deberían de comer en un día.<br> 
+                Segundo sería mirar atrás. Cerciorarse de que no es un pienso para gallinas y que cumpla con una base de proteínas, verduras, carne y todos sus componentes y minerales. Dentro del rango económico de cada titular se pueden mirar marcas más apropiadas nutricionalmente según cada animal.<br> 
+                En tercer lugar, diría que evitemos alimentos tóxicos como la leche, la cebolla o el chocolate. Que a veces se los damos sin querer, pero es muy importante evitarlo.<br>
+                Como cuarto punto la hidratación constante con agua fresca y limpia, especialmente para gatos.<br> 
+                Y así como punto extra te diría también, ojo con el tema de la lo crudo. Porque para mí es bastante peligroso, sobre todo si se quiere hacer casero sin consultar a un nutricionista. Incluso en este tipo de dietas nos podemos saltar muchos minerales y vitaminas que le faltarían.<br>   
+            </p>
+            </div>
+      </div>
+    </div>
+  </div>
+
+    <!--Modal 3-->
+<div id="mas-mascotas-que-niños" class="modal-paper">
+    <div class="modal-content-paper">
+        <div class="paper">
+            <div class="paper-header">
+                <h6>Autora: Zoe Rubio</h6><br>
+                <a class="close-paper" href="#papers">&times;</a>
+            </div>
+            <div class="paper-title">
+                <h2>Los hogares aragoneses tienen más mascotas que niños</h2><br>
+                <h4>La tendencia actual en Aragón refleja los cambios en las prioridades familiares, los desafíos económicos y una creciente conciencia ambiental. ¿Por qué se opta más por una mascota que por un hijo?</h4><br>
+            </div>
+            <img id="portfolioImage" class="paper-image" src="images/noticia-zoe.jpg" alt="Portfolio Image">
+            <p class="pie-foto">Perro con niño de fondo copyright @animalcity.</p>
+            <div class="paper-footer">
+            <p>En una época en la que el cariño y la compañía real escasea es fácil encontrar 
+                el dato que ofrece el <a href="https://www.riaca.org/" target="_blank">
+                    Registro de Identificación de Animales de Compañía de 
+                Aragón (RIACA)</a>: 251.167 animales están censados. A simple vista puede parecer
+                 un número normal, ni mucho ni poco. La sorpresa viene cuando lo comparas con
+                  la cifra de niños entre 0 y 14 años en la misma CCAA: 171.592 según el 
+                  <a href="https://www.ine.es/">Instituto Nacional de Estadística (INE)</a>. ¿Cómo es posible que los niños no
+                   lleguen ni al 70% de las mascotas que hay en Aragón? Y eso, sin tener en
+                    cuenta que no son pocas las mascotas sin censar, aunque ahora sea obligatorio.<br><br>
+                Son varios los motivos por los que puede estar pasando esto, pero Lidia Pradas,
+                 ambientóloga, nos afirma que "los niños suelen consumir más alimentos y recursos
+                  a lo largo de su crecimiento". Este consumo afecta directamente a la economía de
+                   los hogares aragoneses y la conciencia ambiental, algo bastante importante en
+                    los tiempos que vivimos. Si no tienes dinero para tener un hijo y tu activismo
+                     por reducir la contaminación te impiden vivir la experiencia de criar a un
+                      hijo, decides adoptar a un animal. Este, en cierta medida, te permite
+                       experimentar algo similar, pero adecuándose a tus posibilidades.<br><br>
+                Otra de las posibilidades es por la que optó Pilar Acosta, ahora madre de dos hijos.
+                 Ella decidió adoptar con 27 años a Luna, una pastor alemán, ya que "estaba lista
+                  para una nueva responsabilidad y, sobre todo, para compartir mi vida con alguien
+                   especial-comenta-.   En ese momento, no estaba pensando aún en tener hijos,
+                    pero quería ir un paso más allá con mi pareja". Seis años más tarde tuvieron
+                     su primer hijo y después una hija. Ambos pudieron criarse con Luna y formar una.<br><br>
+                Al final, tal y como señala Lidia, no es que las familias aragonesas no quieran tener
+                 hijos, sino que las mascotas requieren de menos exigencias y, por lo tanto, son una
+                  alternativa que se adapta mejor a los estilos de vida modernos.
+            </p>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+
+ <!-- Footer Start -->
+ <section id="footer">
+    <div class="container-fluid footer py-5">
         <div class="container text-center py-5">
             <div class="row">
                 <div class="col-12 mb-4">
                     <a href="index.html" class="navbar-brand m-0">
-                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">i</span>CREAM</h1>
+                        <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
                     </a>
                 </div>
                 <div class="col-12 mb-4">
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://m.youtube.com/@ProyectoPeluchones" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://open.spotify.com/show/4SGNU4GltaoeoVg5ruIvL3" target="_blank"><i class="fab fa-spotify fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social" href="https://www.tiktok.com/@proyectopeluchones" target="_blank"><i class="fab fa-tiktok fa-lg"></i></a>
                 </div>
                 <div class="col-12 mt-2 mb-4">
                     <div class="row">
                         <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
-                            <h5 class="font-weight-bold mb-2">Get In Touch</h5>
-                            <p class="mb-2">123 Street, New York, USA</p>
-                            <p class="mb-0">+012 345 67890</p>
+                            <h5 class="font-weight-bold mb-2"></h5>
                         </div>
                         <div class="col-sm-6 text-center text-sm-left">
-                            <h5 class="font-weight-bold mb-2">Opening Hours</h5>
-                            <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
-                            <p class="mb-0">Sunday: Closed</p>
+                            <h5 class="font-weight-bold mb-2"></h5> 
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
-                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    <h5 class="font-weight-bold mb-2">Correo de Contacto</h5>
+                    <h5 class="font-weight-light mb-2" ><a href="#" data-toggle="modal" data-target="#contactModal">peluchonespeludones@gmail.com</a></h5><br>
+                    <p class="m-0">&copy; <a href="#"></a>En colaboración con: <a href="https://muzzolinidev.com" target="_blank"> Muzzolini Dev</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</section>
+<!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
 
 </html>

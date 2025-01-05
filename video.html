@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Proyecto Peluchones - Videos</title>
+    <title>Proyecto Peluchones - Conócenos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -44,6 +44,7 @@
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
+                        <div class="fecha" id="fecha"></div>
                         <a class="text-white px-3" href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank">
                             <i class="fab fa-instagram  fa-lg" title="Instagram"></i>
                         </a> 
@@ -56,7 +57,7 @@
                             <i class="fab fa-spotify fa-lg" title="Spotify"></i>
                         </a>
 
-                        <a class="text-white px-3" href="" target="_blank">
+                        <a class="text-white px-3" href="#" data-toggle="modal" data-target="#contactModal">
                             <i class="fa fa-envelope fa-lg" title="Contact"></i>
                         </a>
 
@@ -70,189 +71,320 @@
     </div>
     <!-- Topbar End -->
 
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="contactForm" action="https://formspree.io/f/myzzdqvl" method="POST">
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Tu email" required>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+       </div>
 
     <!-- Navbar Start -->
-    <div class="container-fluid green-line position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
-                    <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link " title="Página principal">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link" title="Conócenos">Compawñeras</a>
-                        <a href="paper.html" class="nav-item nav-link" title="Artículos">Huella Actual</a>
-                    </div>
-                    <a href="index.html" class="navbar-brand mx-1 d-none d-lg-block">
-                        <img src="images/titulo.png" class="m-1 img-fluid text-primary">
+    <div class="navbar-wrapper">
+        <div class="container-fluid green-line position-relative nav-bar navbar-container p-0">
+            <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
                     </a>
-                    <div class="navbar-nav mr-auto py-0">
-                        <a href="video.html" class="nav-item nav-link active" title="Videos">Paticaliente</a>
-                        <a href="gallery.html" class="nav-item nav-link" title="Fotografías">Siete Vidas</a>
-                        <a href="podcast.html" class="nav-item nav-link" title="Podcast">Olfateando Información</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="index.html" class="nav-item nav-link" title="Página principal">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link" title="Conócenos">Compawñeras</a>
+                            <a href="paper.html" class="nav-item nav-link" title="Artículos">Huella Actual</a>
+                        </div>
+                        <a href="index.html" class="navbar-brand mx-1 d-none d-lg-block">
+                            <img src="images/titulo.png" class="m-1 img-fluid text-primary d-none d-xl-block">
+                            <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary d-xl-none">
+                        </a>
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="video.html" class="nav-item nav-link active" title="Videos">Paticaliente</a>
+                            <a href="gallery.html" class="nav-item nav-link" title="Fotografías">Siete Vidas</a>
+                            <a href="podcast.html" class="nav-item nav-link" title="Podcast">Olfateando Información</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
     </div>
     <!-- Navbar End -->
 
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
-        <div class="container text-center py-5">
-            <h1 class="text-white display-3 mt-lg-5">Service</h1>
-            <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="">Home</a></p>
-                <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Service</p>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
 
-
-    <!-- Services Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h1 class="section-title position-relative mb-5">Best Services We Provide For Our Clients</h1>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="owl-carousel service-carousel">
-                        <div class="service-item">
-                            <div class="service-img mx-auto">
-                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-1.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Quality Maintain</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
-                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-img mx-auto">
-                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-2.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Individual Approach</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
-                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-img mx-auto">
-                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-3.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Celebration Ice Cream</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
-                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-img mx-auto">
-                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-4.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Delivery To Any Point</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
-                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
-                            </div>
-                        </div>
+   <!-- Carousel Start -->
+   <div class="container-fluid p-0 mb-0 pb-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active d-flex flex-column align-items-center justify-content-start">
+                <img class="w-90" src="images/paticaliente/patiportada.jpg" alt="Image">
+                <div class="about-caption text-compawñeras d-flex flex-column align-items-center justify-content-start">
+                    
+                        <h1 class="display-3 text-compawñeras text-green-2">Paticaliente</h1>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Services End -->
+</div>
 
 
-    <!-- Testimonial Start -->
+<section id="description-beige">
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <h1 class="section-title position-relative text-center mb-5">Clients Say About Our Famous Ice Cream</h1>
+                    <h1 class="section-title position-relative text-center mb-5">Nuestra sección de <span class="orange-text">Videos</span></h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-1.jpg" alt="">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
+                    <div class="text-center">
+                        <h4 class="font-weight-light mb-4">Aunque su nombre es llamativo, “Paticaliente” hace referencia a la expresión venezolana “Pata caliente”, que se refiere a aquella persona que no pone un pie en su casa porque está todo el día haciendo cosas en la calle. Decidimos colocarle ese nombre a nuestra sección porque consideramos que como periodistas nuestro deber es salir a la calle para buscar la información, a las personas y las historias que queremos compartir.<br><br> 
+                            “Paticaliente” es una sección dedicada a los reportajes, noticias y entrevistas que hemos realizado en formato video. En ella encontrarás alucinantes tomas, muchos animales y valiosos testimonios que ayudarán a entender mejor las problemáticas actuales entorno al abandono y maltrato animal en nuestra comunidad.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+<section class="zigzag-section">
+    <div  class="zigzag-container">
+        <!-- Bloque 1 -->
+        <div class="zigzag-block" id="adopta-un-amigo">
+            <div class="zigzag-content left">
+                <div class="text-content">
+                    <h2 class="zigzag-title">Adopta un Amigo</h2>
+                    <h4 class="zigzag-subtitle">El camino de los gatos rescatados en Zaragoza</h4>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-1" class="expand-toggle">
+                        <label for="expand-toggle-1" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text">El equipo de Peluchones ha viajado hasta la Asociación de Protección de Animales "4 Gatos y Tú" para conocer la realidad de los felinos refugiados en la capital aragonesa.<br>
+                                Los gatos son uno de los principales animales abandonados en nuestro país. A pesar de que, según la Fundación Affinity, la adopción de animales ha aumentado en España desde el año pasado, el sector de los gatos ha sufrido una importante disminución en estas cifras.<br>
+                                "4 Gatos y Tú" es una Asociación de Protección Animal que nació en 2007 como la primera protectora enfocada en gatos en Zaragoza. Dada su especialidad, cuentan con un refugio adaptado y organizado para darles una vida digna y buscarles un hogar a aquellos animales que llegan a sus brazos.<br>
+                                Peluchones ha tenido el gusto de hablar con su secretario, David Martínez, y una de sus voluntarias, Noelia Cantero, quien ayuda a mantener limpio un hogar y tramitar las adopciones.<br><br>
+                                Créditos:<br>
+                                Cámara: Mariangel Barra<br>
+                                Edición: Mariangel Barra<br>
+                                Guion: Mariangel Barra<br>
+                                Locución: Inés Díaz<br>
+                                In Situ: Mariangel Barra<br>
+                                Producción: Zoe Rubio<br>
+                                Equipo de apoyo: María Ondo</p>
                         </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-2.jpg" alt="">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
+                    </div>
+                </div>
+            </div>
+            <div class="zigzag-image right">
+                <iframe class="zigzag-image" width="560" height="315" src="https://www.youtube.com/embed/LqhRbRWUdG4?si=KCEGLfrn9cAnwIoK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Bloque 2 -->
+        <div class="zigzag-block reverse" id="patrulla-canina">
+            <div class="zigzag-image reverse">
+                <iframe class="zigzag-image" width="560" height="315" src="https://www.youtube.com/embed/rxiyvSWPufw?si=-l-sDF8uA-pb-OBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="zigzag-content right">
+                <div class="text-content reverse">
+                    <h2 class="zigzag-title">Patrulla Canina</h2>
+                    <h4 class="zigzag-subtitle">Los perros bomberos de Zaragoza</h4>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-2" class="expand-toggle">
+                        <label for="expand-toggle-2" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text">El equipo de Peluchones se ha acercado a la Estación de Bomberos n.°1 de Zaragoza para conocer a su Unidad Canina.<br>
+                                Jesús Araguás, Jefe de Intervención y Coordinador de la Unidad Canina, nos cuenta cómo se formó este equipo en 2017 y la importancia que tienen en el cuerpo de bomberos de la ciudad para las tareas más importantes.<br>
+                                También nos acompaña Emilio Bascones, Subjefe de Intervención y Guía Canino, quien se encarga de ayudar a sus peludos compañeros para adaptarse al ambiente y entrenarlos para ayudar a la población en situaciones como terremotos, derrumbes o desastres como la DANA de Valencia.<br><br> 
+                                Créditos:<br>
+                                Cámara: María Ondo e Inés Díaz<br>
+                                Edición: María Ondo<br>
+                                Guion: Inés Díaz<br>
+                                Locución: María Ondo<br>
+                                In Situ: Zoe Rubio<br>
+                                Producción: Zoe Rubio<br>
+                                Equipo de apoyo: Mariangel Barra</p>
                         </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-3.jpg" alt="">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+        
+        <!-- Bloque 3 -->
+        <div class="zigzag-block" id="mesa-redonda">
+            <div class="zigzag-content left">
+                <div class="text-content">
+                    <h2 class="zigzag-title">Mesa Redonda</h2>
+                    <h4 class="zigzag-subtitle">Conversaciones sobre la salud mental de los animales abandonados</h4>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-3" class="expand-toggle">
+                        <label for="expand-toggle-3" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text">El equipo de Peluchones presentó el pasado 18 de noviembre su primera mesa redonda en colaboración con David Martínez, secretario de la Asociación Protectora 4 Gatos y Tú, Emma Palacios, etóloga y psicóloga y Mónica Marín, titular de varios animales abandonados.<br> 
+                                Presentamos un diálogo sobre la situación de los animales abandonados en Aragón desde una perspectiva centrada en su salud mental, legal y humana.<br>
+                                La mesa fue moderada por Mariangel Barra, editora y redactora del equipo de Peluchones. Junto con la ayuda de Inés Díaz, María Ondo y Zoe Rubio detrás de cámaras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zigzag-image right">
+                <iframe class="zigzag-image" width="560" height="315" src="https://www.youtube.com/embed/S5KhCH6IvOM?si=DtV1-DSFXjwjKeTy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Bloque 4 -->
+        <div class="zigzag-block reverse" id="huella-turolense">
+            <div class="zigzag-image reverse">
+                <iframe class="zigzag-image" width="560" height="315" src="https://www.youtube.com/embed/ym7AIkN_0JU?si=z4kMctUYLFz551Uj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="zigzag-content right">
+                <div class="text-content reverse">
+                    <h2 class="zigzag-title">Huella Turolense</h2>
+                    <h4 class="zigzag-subtitle">El rescate de animales y las colonias felinas en la provincia de Teruel</h4>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-4" class="expand-toggle">
+                        <label for="expand-toggle-4" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text">Tras lo ocurrido en el desastre de la DANA en la Comunidad Valenciana el pasado mes de octubre, el equipo de Peluchones se ha acercado a la Ciudad de Transporte en Zaragoza para acompañar a los voluntarios de las diferentes protectoras animales de la ciudad que recogen, embalan y clasifican las donaciones recaudadas para los afectados.<br>
+                                Concepción Soria, voluntaria de la ARE (Adopción y Rescate en España) y Sergio Moreno, voluntario y bombero zaragozano, nos han contado las actividades que han realizado a lo largo del día, la planificación de envío de las mercancías y qué donaciones son las más necesarias en casos como este.<br><br>
+                                Créditos:<br>
+                                Cámara: Mariangel Barra<br>
+                                Edición: Mariangel Barra<br>
+                                Guion: Mariangel Barra e Inés Díaz<br>
+                                Locución: Mariangel Barra<br>
+                                In Situ: María Ondo<br>
+                                Producción: Zoe Rubio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bloque 5 -->
+        <div class="zigzag-block" id="dana-proyecto-anastasia">
+            <div class="zigzag-content left">
+                <div class="text-content">
+                    <h2 class="zigzag-title">Dana</h2>
+                    <h4 class="zigzag-subtitle">El Proyecto Anastasia y las donaciones zaragozanas</h4>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-5" class="expand-toggle">
+                        <label for="expand-toggle-5" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text">Tras lo ocurrido en el desastre de la DANA en la Comunidad Valenciana el pasado mes de octubre, el equipo de Peluchones se ha acercado a la Ciudad de Transporte en Zaragoza para acompañar a los voluntarios de las diferentes protectoras animales de la ciudad que recogen, embalan y clasifican las donaciones recaudadas para los afectados.<br>
+                                Concepción Soria, voluntaria de la ARE (Adopción y Rescate en España) y Sergio Moreno, voluntario y bombero zaragozano, nos han contado las actividades que han realizado a lo largo del día, la planificación de envío de las mercancías y qué donaciones son las más necesarias en casos como este.<br><br>
+                                Créditos:<br>
+                                Cámara: Mariangel Barra<br>
+                                Edición: Mariangel Barra<br>
+                                Guion: Mariangel Barra e Inés Díaz<br>
+                                Locución: Mariangel Barra<br>
+                                In Situ: María Ondo<br>
+                                Producción: Zoe Rubio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zigzag-image right">
+                <iframe class="zigzag-image" width="560" height="315" src="https://www.youtube.com/embed/6QFxggXKnAY?si=-foI49YVN2EtY8XE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- Bloque 6 -->
+        <div class="zigzag-block reverse" id="pet-market">
+            <div class="zigzag-image reverse">
+                <iframe class="zigzag-image" width="560" height="315" src="https://www.youtube.com/embed/lxFU07W0cQ0?si=EQDpPPtSvIlXotTn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="zigzag-content right">
+                <div class="text-content reverse">
+                    <h2 class="zigzag-title">Pet Market</h2>
+                    <h4 class="zigzag-subtitle">Innovación animal en Zaragoza</h4>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-6" class="expand-toggle">
+                        <label for="expand-toggle-6" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text">El Pet Market de Zaragoza es el único mercado de la ciudad dedicado a las mascotas. Este año 2024 se celebró entre el 30 de noviembre y el 1 de diciembre, contando con más del 20 expositores del mundo animal provenientes de diversos puntos de España que mostraron todo tipo de mercancía como joyería, decoración, complementos, moda, educación y alimentación para los peludos de la casa. También contó con espacios de ocio como stands de fotografía y un punto dental gratuito.<br>
+                                Por otro lado, durante ambos días en el evento se recaudaron donaciones para los afectados de la DANA de la Comunidad Valenciana, recolectando objetos de vital importancia como: mantas, camas, toallas, pienso, latas de comida, productos de limpieza y medicinas.<br>
+                                El equipo de Peluchones ha tenido el placer de entrevistar a su organizadora, Silvia Porras, quien nos ha contado un poco sobre los inicios del Pet Market en Zaragoza y la evolución positiva que ha tenido. A su vez, hemos podido hablar con expositores de asociaciones y negocios como APACHE Innovación, Global Can, Gatitters, Protectora AMAR, WildBite y Canina Biloba.<br>
+                                ¡Te esperamos el próximo año!<br><br>
+                                Créditos:<br>
+                                Cámara: Inés Díaz<br>
+                                Edición: Inés Díaz y Mariangel Barra<br>
+                                Locución: Zoe Rubio<br>
+                                Guion: Inés Díaz<br>
+                                In Situ: María Ondo<br>
+                                Producción: Mariangel Barra e Inés Díaz</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+</section>
 
 
     <!-- Footer Start -->
-    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
-        <div class="container text-center py-5">
-            <div class="row">
-                <div class="col-12 mb-4">
-                    <a href="index.html" class="navbar-brand m-0">
-                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">i</span>CREAM</h1>
-                    </a>
-                </div>
-                <div class="col-12 mb-4">
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="col-12 mt-2 mb-4">
-                    <div class="row">
-                        <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
-                            <h5 class="font-weight-bold mb-2">Get In Touch</h5>
-                            <p class="mb-2">123 Street, New York, USA</p>
-                            <p class="mb-0">+012 345 67890</p>
-                        </div>
-                        <div class="col-sm-6 text-center text-sm-left">
-                            <h5 class="font-weight-bold mb-2">Opening Hours</h5>
-                            <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
-                            <p class="mb-0">Sunday: Closed</p>
+    <section id="footer">
+        <div class="container-fluid footer py-5">
+            <div class="container text-center py-5">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <a href="index.html" class="navbar-brand m-0">
+                            <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
+                        </a>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a class="btn btn-outline-secondary btn-social mr-2" href="https://m.youtube.com/@ProyectoPeluchones" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a class="btn btn-outline-secondary btn-social mr-2" href="https://open.spotify.com/show/4SGNU4GltaoeoVg5ruIvL3" target="_blank"><i class="fab fa-spotify fa-lg"></i></a>
+                        <a class="btn btn-outline-secondary btn-social" href="https://www.tiktok.com/@proyectopeluchones" target="_blank"><i class="fab fa-tiktok fa-lg"></i></a>
+                    </div>
+                    <div class="col-12 mt-2 mb-4">
+                        <div class="row">
+                            <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                                <h5 class="font-weight-bold mb-2"></h5>
+                            </div>
+                            <div class="col-sm-6 text-center text-sm-left">
+                                <h5 class="font-weight-bold mb-2"></h5> 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12">
-                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
-                    </p>
+                    <div class="col-12">
+                        <h5 class="font-weight-bold mb-2">Correo de Contacto</h5>
+                        <h5 class="font-weight-light mb-2" ><a href="#" data-toggle="modal" data-target="#contactModal">peluchonespeludones@gmail.com</a></h5><br>
+<!--                         <p class="m-0">&copy; <a href="#"></a>En colaboración con: <a href="https://muzzolinidev.com" target="_blank"> Muzzolini Dev</a>
+ -->                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Footer End -->
 
 
@@ -268,13 +400,11 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <script async src="//www.instagram.com/embed.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+
 
 </html>

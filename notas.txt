@@ -1,7 +1,4 @@
-con el inicio
-2. poner el video de presentación
-
 global(mañana)
-1. arreglar el cursor
 2. botones de compartir
 3. títulos-enlace en el inicio
+4. que todos los modales salgan al clicar fuera de ellos

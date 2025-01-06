@@ -11481,7 +11481,7 @@ h6,
 
 /* Cuando el checkbox está marcado, muestra el contenido */
 .expand-toggle:checked ~ .expandable-content {
-  max-height: 1000px; /* Ajusta este valor según la altura máxima que necesites */
+  max-height: 1500px; /* Ajusta este valor según la altura máxima que necesites */
 }
 
 /* Cambia el texto del botón cuando está expandido */

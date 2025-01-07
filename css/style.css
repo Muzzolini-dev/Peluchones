@@ -8095,6 +8095,15 @@ button.bg-dark:focus {
   width: 25% !important;
 }
 
+.sky-blue {
+  font-size: 36px;
+  color:#e36849
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
 .w-50 {
   width: 50% !important;
 }
@@ -11132,6 +11141,18 @@ h6,
   margin-top: 0%;
 }
 
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pie-foto {
+  font-size: 16px !important;
+}
+
 .paper-footer p {
   font-size: 1.2rem;
   font-weight: 400;
@@ -11208,7 +11229,7 @@ h6,
 .pie-foto {
   color: #137c79;
   font-weight: 900 !important;
-  font-family: 0.5rem !important;
+  font-family: 16px !important;
   text-align: center;
   margin-top: 0;
   padding-top: 1px;
@@ -11566,6 +11587,14 @@ h6,
   transition: all 0.3s ease;
 }
 
+.expand-btn.collapse-text::before {
+  content: none;  /* Esto elimina el contenido del pseudo-elemento before */
+}
+
+.expand-btn.collapse-text::after {
+  content: "Mostrar menos"!important;  /* o el texto que prefieras */
+}
+
 /* Cambio de color al hover */
 .expand-btn:hover {
   background-color: #e36849;
@@ -11578,9 +11607,19 @@ h6,
   transition: max-height 0.3s ease-out;
 }
 
+.expandable-content-no-limit {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
 /* Cuando el checkbox está marcado, muestra el contenido */
 .expand-toggle:checked ~ .expandable-content {
   max-height: 1500px; /* Ajusta este valor según la altura máxima que necesites */
+}
+
+.expand-toggle:checked ~ .expandable-content-no-limit {
+  max-height: 10000px; /* Ajusta este valor según la altura máxima que necesites */
 }
 
 /* Cambia el texto del botón cuando está expandido */

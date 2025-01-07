@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Proyecto Peluchones - Fotografías</title>
+    <title>Proyecto Peluchones - Conócenos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -44,6 +44,7 @@
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
+                        <div class="fecha" id="fecha"></div>
                         <a class="text-white px-3" href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank">
                             <i class="fab fa-instagram  fa-lg" title="Instagram"></i>
                         </a> 
@@ -56,7 +57,7 @@
                             <i class="fab fa-spotify fa-lg" title="Spotify"></i>
                         </a>
 
-                        <a class="text-white px-3" href="" target="_blank">
+                        <a class="text-white px-3" href="#" data-toggle="modal" data-target="#contactModal">
                             <i class="fa fa-envelope fa-lg" title="Contact"></i>
                         </a>
 
@@ -70,184 +71,868 @@
     </div>
     <!-- Topbar End -->
 
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="contactForm" action="https://formspree.io/f/myzzdqvl" method="POST">
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Tu email" required>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+       </div>
 
     <!-- Navbar Start -->
-    <div class="container-fluid green-line position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
-                    <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link " title="Página principal">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link" title="Conócenos">Compawñeras</a>
-                        <a href="paper.html" class="nav-item nav-link" title="Artículos">Huella Actual</a>
-                    </div>
-                    <a href="index.html" class="navbar-brand mx-1 d-none d-lg-block">
-                        <img src="images/titulo.png" class="m-1 img-fluid text-primary">
+    <div class="navbar-wrapper">
+        <div class="container-fluid green-line position-relative nav-bar navbar-container p-0">
+            <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
                     </a>
-                    <div class="navbar-nav mr-auto py-0">
-                        <a href="video.html" class="nav-item nav-link" title="Videos">Paticaliente</a>
-                        <a href="gallery.html" class="nav-item nav-link active" title="Fotografías">Siete Vidas</a>
-                        <a href="podcast.html" class="nav-item nav-link" title="Podcast">Olfateando Información</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="index.html" class="nav-item nav-link" title="Página principal">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link" title="Conócenos">Compawñeras</a>
+                            <a href="paper.html" class="nav-item nav-link" title="Artículos">Huella Actual</a>
+                        </div>
+                        <a href="index.html" class="navbar-brand mx-1 d-none d-lg-block">
+                            <img src="images/titulo.png" class="m-1 img-fluid text-primary d-none d-xl-block">
+                            <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary d-xl-none">
+                        </a>
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="video.html" class="nav-item nav-link" title="Videos">Paticaliente</a>
+                            <a href="podcast.html" class="nav-item nav-link" title="Podcast">Olfateando Información</a>
+                            <a href="gallery.html" class="nav-item nav-link active" title="Fotografías">Siete Vidas</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
     </div>
     <!-- Navbar End -->
 
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
-        <div class="container text-center py-5">
-            <h1 class="text-white display-3 mt-lg-5">Gallery</h1>
-            <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="">Home</a></p>
-                <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Gallery</p>
+
+   <!-- Carousel Start -->
+   <div class="container-fluid p-0 mb-0 pb-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active d-flex flex-column align-items-center justify-content-start">
+                <img class="w-90" src="images/pg-seccion.jpg" alt="Image">
+                <div class="about-caption text-compawñeras d-flex flex-column align-items-center justify-content-start">
+                    
+                        <h1 class="display-3 text-compawñeras text-green-2">Siete Vidas</h1>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+</div>
 
-
-    <!-- Portfolio Start -->
-    <div class="container-fluid py-5 px-0">
+<section id="description-beige" class="pink-bg">
+    <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-5">
-                    <h1 class="section-title position-relative text-center mb-5">Delicious Ice Cream Made From Our Very Own Organic Milk</h1>
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative text-center mb-5">Nuestra sección de <span class="orange-text">Fotorreportajes</span></h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <ul class="list-inline mb-4 pb-2" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Cone</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Vanilla</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Chocolate</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row m-0 portfolio-container">
-                <div class="col-lg-4 col-md-6 p-0 portfolio-item first">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
-                        <a class="portfolio-btn" href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                            <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 p-0 portfolio-item second">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
-                        <a class="portfolio-btn" href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                            <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 p-0 portfolio-item third">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
-                        <a class="portfolio-btn" href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                            <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 p-0 portfolio-item first">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
-                        <a class="portfolio-btn" href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                            <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 p-0 portfolio-item second">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
-                        <a class="portfolio-btn" href="img/portfolio-5.jpg" data-lightbox="portfolio">
-                            <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 p-0 portfolio-item third">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
-                        <a class="portfolio-btn" href="img/portfolio-6.jpg" data-lightbox="portfolio">
-                            <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                        </a>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <h4 class="font-weight-light mb-4">En esta sección los animales traspasan el foco de la cámara para contarnos sus historias. En el equipo de Peluchones nos hemos asegurado de registrar todos los momentos importantes de nuestras aventuras, por ello también hemos creado nuestra propia revista “Siete Vidas”, en la que publicaremos fotorreportajes redactados para contar en profundidad la historia de los animales.</h4>
+                        <img class="w-40" src="images/siete/siete.gif">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Portfolio End -->
+</section> 
+
+
+
+
+     <!-- Portfolio Start -->
+     <section id="gallery">
+        <div class="container-fluid my-5 py-5 px-auto">
+            <div class="row justify-content-center m-0">
+                <div class="col-lg-5">
+                    <h1 class="section-title position-relative text-center mb-5">Galería de Fotorreportajes</h1>
+                </div>
+            </div>
+            <div class="row g-0 portfolio-container">
+                <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="images/7v-portada.jpg" alt="">
+                        <a class="portfolio-btn text-portfolio" href="#" data-toggle="modal" data-target="#siete-vidas">
+                            <p class="text-portfolio">Siete Vidas: Memorias de una Voluntaria</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="images/mjm-portada.jpg" alt="">
+                        <a class="portfolio-btn text-portfolio" href="#" data-toggle="modal" data-target="#modalMJM">
+                            <p class="text-portfolio">Compañía en la Soledad</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="images/pg-portada.jpg" alt="">
+                        <a class="portfolio-btn text-portfolio" href="#" data-toggle="modal" data-target="#modalPG">
+                            <p class="text-portfolio">Proyecto Gato Teruel</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="images/am-portada.jpg" alt="">
+                        <a class="portfolio-btn text-portfolio" href="#" data-toggle="modal" data-target="#modalAM">
+                            <p class="text-portfolio">Amigo Mío Teruel</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="images/4g-portada.jpg" alt="">
+                        <a class="portfolio-btn text-portfolio" href="#" data-toggle="modal" data-target="#modal4G">
+                            <p class="text-portfolio">4 Gatos y Tú: Adoptar un Amigo</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="images/bom-portada.jpg" alt="">
+                        <a class="portfolio-btn text-portfolio" href="#" data-toggle="modal" data-target="#modalBOM">
+                            <p class="text-portfolio">Patrulla Canina</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--Modal 1-->
+<div id="siete-vidas" class="modal-paper">
+    <div class="modal-content-paper">
+        <div class="paper">
+            <div class="paper-header mt-2">
+                <h6 class="mt-3">Autora: Mariangel Barra</h6><br>
+                <button type="button" class="close mt-3" data-dismiss="modal">×</button>
+            </div>
+            <div class="paper-title">
+                <h2>Siete Vidas</h2><br>
+                <h4>Memorias de una Voluntaria</h4><br>
+            </div>
+            <img id="portfolioImage" class="paper-image" src="images/siete/7v/7v-portada.jpg" alt="Portfolio Image">
+            <p class="pie-foto">¡Descubre nuestra primera edición “Siete Vidas: Memorias de una voluntaria”!</p>
+            
+            <div class="paper-footer">
+                <div class="button-container">
+                    <label for="expand-toggle-2" class="expand-btn"></label>
+                    <a href="images/siete/7v/SIETE VIDAS MONTADO. BARRA NAVAS MARIANGEL.pdf" class="btn-paper btn btn-secondary" download>Descargar Revista</a>
+                    <button data-dismiss="modal" data-toggle="modal" data-target="#siete-vidas-fotos-Modal" class="btn btn-primary">Ver Fotos</button>
+                </div>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-2" class="expand-toggle">
+                        
+                        <div class="expandable-content-no-limit">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p><br><b>PASIÓN</b><br>
+                                Estefanía Soto ha sido voluntaria en diversas asociaciones desde que cumplió la mayoría de edad. Empezó con Cruz Roja Juventud y continuó durante varios años colaborando con programas como “Apúntate”, dedicado al ocio de las personas que pertenecen al espectro autista. También en proyectos como “Allies in English” donde ayudaba a personas sordas a aprender inglés. En 2020 finalmente llegó a Proyecto Gato Teruel para volcar toda su pasión y amor por ayudar a los pequeños felinos que buscan un hogar.<br><br>
+                                <img id="portfolioImage" class="paper-image second-image" src="images/siete/7v/7v-1.jpg" alt="Portfolio Image"><br>
+                                <span class="pie-foto">Estefanía sacando de la caseta de gatos a Pancho, el cual fue recogido junto a sus 3 hermanos que temblaban de miedo luego de ser abandonados.</span><br>
+                                
+                            <b>CAMBIO</b><br>
+                                Soto considera que es necesario cambiar el mundo: “Una cosa que podemos hacer para eso es dedicar nuestro tiempo a aquellos que más lo necesitan”. A su vez, afirma que ser voluntaria es una de las mejores experiencias que ha tenido: “Es maravilloso, se lo recomiendo a todo el mundo. Aprendes muchísimo, conoces personas afines a ti, te conoces mejor a ti misma… Y lo que te llevas vale mucho más que todo el dinero que podrías pagar por ello”. Los gatos, en especial, son seres que la han acompañado toda su vida: “Siempre he tenido una conexión muy especial con ellos, siento que te aceptan tal y como eres… no te juzgan”.<br><br>
+                                <img id="portfolioImage" class="paper-image second-image" src="images/siete/7v/7v-2.jpg" alt="Portfolio Image"><br>
+                                <span class="pie-foto">Estefanía sosteniendo la cara de Pancho para asegurarse que le puede poner bien la medicina sin hacerle daño. Pancho tiene un defecto en el ojo y por eso nadie lo adopta.</span><br>
+                                
+                                <b>DEDICACIÓN</b><br>
+                                Limpiar, alimentar, medicar, amar y gestionar adopciones: esas son las principales tareas de una voluntaria como Estefanía. Confiesa que tiene una conexión cercana con ellos y eso la ayuda a disfrutar más su labor: “Me parece que son animales que están muy incomprendidos. Hay mucha menos gente que les presta atención y ayuda, por lo que cuando me planteé seguir siendo voluntaria decidí que sería colaborando con asociaciones de gatos”. Para ella, ser voluntaria es dar voz a quienes no la tienen, poniendo su propio granito de arena.<br><br>
+                                <img id="portfolioImage" class="paper-image second-image" src="images/siete/7v/7v-4.jpg" alt="Portfolio Image"><br>
+                                <span class="pie-foto">Estefanía aplicando la medicina para los ojitos de Pancho. A pesar de que nadie lo ha adoptado aún y de su pasado de abandono, Pancho es muy tranquilo y cariñoso.</span><br>
+                                
+                                <b>IGUALDAD</b><br>
+                                Para ella, uno de los mayores errores de la educación en España en cuanto a los animales es olvidar nuestro origen: “Se nos olvida que nosotros mismos somos animales, no somos seres superiores ni tenemos derechos por encima de ellos”. Respecto a los gatos, Soto considera que quedan muchos mitos por romper: “Empezando con que no son cariñosos, que son independientes, que no necesitan tanta atención como los perros o que son fáciles y se dan vida en la calle cuando en realidad hay muchos peligros afuera para animales como ellos”.<br><br>
+                                <img id="portfolioImage" class="paper-image second-image" src="images/siete/7v/7v-6.jpg" alt="Portfolio Image"><br>
+                                <span class="pie-foto">Estefanía acariciando a Jero. Era un gatito callejero que un día se acercó al antiguo refugio de Amigo Mío y entró aprovechando que habían dejado la puerta abierta. Cuando lo encontraron estaba durmiendo en una de las camas, y afirman que no tuvieron corazón para echarlo, así que se quedó.</span><br>
+                                
+                                <b>VÍNCULO</b><br>
+                                Su vínculo con los animales no se limita a las paredes del refugio, sino que también lo aplica en casa. Tiene una perra y cuatro gatos a los que les dedica todo su cariño y atención, conexión que se permite trasladar a su voluntariado para poder ayudar a los que no tienen tanta suerte: “Me encanta sacar a pasear a la perra, perderme con ella por el monte, sentarnos y estar rodeadas de naturaleza. Son momentos de mucha calma y relajación en los que considero que tengo muy buen vínculo con ellos”. De hecho, uno de sus sueños es tener su propio santuario de protección animal en donde pueda rehabilitarlos para que puedan ser adoptados y que todos tengan un hogar: “Aunque, mi sueño en realidad es que no sean necesarios los santuarios, que la gente adopte con corazón y que desaparezca el maltrato animal”.<br><br>
+                                <img id="portfolioImage" class="paper-image second-image" src="images/siete/7v/7v-portada.jpg" alt="Portfolio Image"><br>
+                                <span class="pie-foto">Estefanía compartiendo miradas con Sheldon, que fue abandonado junto a sus hermanos en una caja fuera de un supermercado. La semana del 25 de noviembre del 2024 consiguió una casa de acogida con opción a adopción, lleva 6 años esperando por ella.</span><br>
+                                
+                                <b>ESPECIAL</b><br>
+                                Una de las problemáticas que viven los refugios y sus voluntarios es poder dar en adopción gatitos con necesidades especiales, como el caso de la gatita Ani y su leucemia: “Aunque ser positivo no es sinónimo de estar enfermo, sí que son gatos que son más propensos a desarrollar enfermedades”. En concreto con la leucemia, Soto afirma que son más propensos a desarrollar tumores, por lo que necesitan una mayor atención veterinaria: “La leucemia, además, se transmite por el contacto estrecho entre gatos, por lo que se recomienda que sean gatos únicos, aunque pueden convivir perfectamente con perros y humanos”. A los gatos con necesidades especiales les cuesta más salir de los refugios: “Un gato con un solo ojo o sin una pata no se considera tan bonito”. Igualmente, hay que recordar que muchos de estos gatos pueden hacer su vida con total normalidad.<br><br>
+                                <img id="portfolioImage" class="paper-image second-image" src="images/siete/7v/7v-9.jpg" alt="Portfolio Image"><br>
+                                <span class="pie-foto">Estefanía alimentando a Ani, una gatita muy cariñosa de una colonia felina que al momento de esterilizarla se dieron cuenta que tenía leucemia.</span><br>
+                                
+                                <b>MEMORIAS</b><br>
+                                Ser voluntaria en un refugio de animales tiene como desventaja vivir junto a ellos las tristezas que el abandono trae consigo. Estefanía recuerda, por ejemplo, el caso de Triana, una gatita que fue recogida junto a su madre Tres (porque la abandonaron tres veces) y sus dos hermanitos. Su madre y sus hermanos consiguieron hogar pero en Triana nadie nunca se fijó: “Murió este año a los 8 añitos, lo cual es muy poco para un gato. Yo era su madrina, por lo que pedí que fuera incinerada. Junto a las otras voluntarias pagamos el proceso y me llevé las cenizas a mi casa unos días antes de llevarlas de vuelta al refugio. Cuando pasé por la puerta pensé: “Dios, esta es la primera vez que Triana conoce un hogar”.<br><br>
+                                <img id="portfolioImage" class="paper-image second-image" src="images/siete/7v/7v-11.jpg" alt="Portfolio Image"><br>
+                                <span class="pie-foto">Estefanía besando a Pancho</span><br>
+                                
+                                <b>COLONIAS</b><br>
+                                Además de todas las asociaciones a las que ha pertenecido como voluntaria, Estefanía Soto también ayuda en las colonias de gatos de Teruel. Empezó hace 3 años tras ofrecerse a ayudar a una de sus amigas que trabajaba en ella: “Me parecen supernecesarias porque no solo alimentamos sino que también mantenemos limpia la ciudad”. Para poder cuidarlos tienen protocolos como: nunca poner la comida en el suelo, no darles comida casera, cambiar diariamente el agua y su obligatoria castración para evitar la excesiva población. “El problema que tenemos en Teruel es el abandono, no las colonias. Las colonias son la solución al problema, porque las personas deben adoptar con amor pero también con conciencia de lo que requiere tener una mascota”.<br><br>
+                                <img id="portfolioImage" class="paper-image second-image" src="images/siete/7v/7v-12.jpg" alt="Portfolio Image"><br>
+                                <span class="pie-foto">Estefanía saludando a Shiro, un gatito de una de las colonias felinas de Teruel, una de las pocas que se ha permitido que permanezca en una zona privada ya que existía previamente.</span>
+                            </p>
+                            <input type="checkbox" id="expand-toggle-2" class="expand-toggle">
+                            <label for="expand-toggle-2" class="expand-btn collapse-text"></label>
+                        </div>
+                    </div>
+                
+            </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Modal para Compañía en la Soledad -->
+ <div class="modal fade" id="siete-vidas-fotos-Modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="carouselMJM" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item  active">
+                            <img src="images/siete/7v/7v-portada.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-1.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-2.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-3.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-4.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-5.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-6.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-7.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-8.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-9.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-10.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-11.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/7v/7v-12.jpg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev sky-blue" href="#carouselMJM" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="carousel-control-next sky-blue" href="#carouselMJM" role="button" data-slide="next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal para Compañía en la Soledad -->
+<div class="modal fade" id="modalMJM" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="carouselMJM" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item  active">
+                            <img src="images/siete/mjm/mjm-portada.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-1.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-2.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-3.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-5.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-6.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-7.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-8.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-9.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-11.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-12.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-13.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-14.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-15.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-16.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-17.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/mjm/mjm-18.jpg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev sky-blue" href="#carouselMJM" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="carousel-control-next sky-blue" href="#carouselMJM" role="button" data-slide="next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal para Proyecto Gato -->
+<div class="modal fade" id="modalPG" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="carouselPG" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item  active">
+                            <img src="images/siete/pg/pg-portada.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-1.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-2.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-3.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-4.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-5.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-6.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-7.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-8.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-9.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-10.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-11.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-12.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-13.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-14.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-15.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-16.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-17.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-18.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-19.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-20.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-21.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-22.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-23.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-24.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-25.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-26.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-27.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-28.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-29.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-30.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-31.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-32.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-33.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-34.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-35.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-36.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-37.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/pg/pg-38.jpg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev sky-blue" href="#carouselPG" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="carousel-control-next sky-blue" href="#carouselPG" role="button" data-slide="next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Modal para Amigo Mio -->
+ <div class="modal fade" id="modalAM" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="carouselAM" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item  active">
+                            <img src="images/siete/am/am-portada.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-1.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-2.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-3.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-5.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-6.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-7.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-8.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-9.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-10.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-11.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-12.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-13.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-14.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-15.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-16.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-17.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-18.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/am/am-19.jpg" class="d-block w-100">
+                        </div>
+                        
+                    </div>
+                    <a class="carousel-control-prev sky-blue" href="#carouselAM" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="carousel-control-next sky-blue" href="#carouselAM" role="button" data-slide="next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para 4 gatos -->
+<div class="modal fade" id="modal4G" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="carousel4G" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item  active">
+                            <img src="images/siete/4g/4g-portada.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-1.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-2.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-3.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-4.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-5.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-6.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-7.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-8.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-9.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-10.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-11.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-12.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-13.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-14.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-15.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-16.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-17.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-18.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-19.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-20.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-21.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-22.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-23.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-24.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-25.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-26.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-27.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-28.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-29.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-30.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-31.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-32.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-33.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-34.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-35.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-36.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-37.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-38.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-39.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/4g/4g-40.jpg" class="d-block w-100">
+                        </div>
+                       
+                    </div>
+                    <a class="carousel-control-prev sky-blue" href="#carousel4G" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="carousel-control-next sky-blue" href="#carousel4G" role="button" data-slide="next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para patrulla canina -->
+<div class="modal fade" id="modalBOM" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="carouselBOM" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item  active">
+                            <img src="images/siete/bom/bom-portada.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-1.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-2.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-3.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-4.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-5.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-6.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-7.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-8.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-9.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-10.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-11.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-12.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-13.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-14.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-15.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/siete/bom/bom-16.jpg" class="d-block w-100">
+                        </div>
+                       
+                    </div>
+                    <a class="carousel-control-prev sky-blue" href="#carouselAM" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="carousel-control-next sky-blue" href="#carouselAM" role="button" data-slide="next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
     <!-- Footer Start -->
-    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+ <section id="footer">
+    <div class="container-fluid footer py-5">
         <div class="container text-center py-5">
             <div class="row">
                 <div class="col-12 mb-4">
                     <a href="index.html" class="navbar-brand m-0">
-                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">i</span>CREAM</h1>
+                        <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
                     </a>
                 </div>
                 <div class="col-12 mb-4">
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://m.youtube.com/@ProyectoPeluchones" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://open.spotify.com/show/4SGNU4GltaoeoVg5ruIvL3" target="_blank"><i class="fab fa-spotify fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social" href="https://www.tiktok.com/@proyectopeluchones" target="_blank"><i class="fab fa-tiktok fa-lg"></i></a>
                 </div>
                 <div class="col-12 mt-2 mb-4">
                     <div class="row">
                         <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
-                            <h5 class="font-weight-bold mb-2">Get In Touch</h5>
-                            <p class="mb-2">123 Street, New York, USA</p>
-                            <p class="mb-0">+012 345 67890</p>
+                            <h5 class="font-weight-bold mb-2"></h5>
                         </div>
                         <div class="col-sm-6 text-center text-sm-left">
-                            <h5 class="font-weight-bold mb-2">Opening Hours</h5>
-                            <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
-                            <p class="mb-0">Sunday: Closed</p>
+                            <h5 class="font-weight-bold mb-2"></h5> 
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
-                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    <h5 class="font-weight-bold mb-2">Correo de Contacto</h5>
+                    <h5 class="font-weight-light mb-2" ><a href="#" data-toggle="modal" data-target="#contactModal">peluchonespeludones@gmail.com</a></h5><br>
+                     <p class="m-0">&copy;<b>Proyecto Peluchones 2025</b><a href="#"></a><!-- En colaboración con: <a href="https://muzzolinidev.com" target="_blank"> Muzzolini Dev</a> -->
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</section>
+<!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
 
 </html>

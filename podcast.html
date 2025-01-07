@@ -44,6 +44,7 @@
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
+                        <div class="fecha" id="fecha"></div>
                         <a class="text-white px-3" href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank">
                             <i class="fab fa-instagram  fa-lg" title="Instagram"></i>
                         </a> 
@@ -56,7 +57,7 @@
                             <i class="fab fa-spotify fa-lg" title="Spotify"></i>
                         </a>
 
-                        <a class="text-white px-3" href="" target="_blank">
+                        <a class="text-white px-3" href="#" data-toggle="modal" data-target="#contactModal">
                             <i class="fa fa-envelope fa-lg" title="Contact"></i>
                         </a>
 
@@ -70,153 +71,349 @@
     </div>
     <!-- Topbar End -->
 
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="contactForm" action="https://formspree.io/f/myzzdqvl" method="POST">
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Tu email" required>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+       </div>
 
     <!-- Navbar Start -->
-    <div class="container-fluid green-line position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
-                    <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link " title="Página principal">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link" title="Conócenos">Compawñeras</a>
-                        <a href="paper.html" class="nav-item nav-link" title="Artículos">Huella Actual</a>
-                    </div>
-                    <a href="index.html" class="navbar-brand mx-1 d-none d-lg-block">
-                        <img src="images/titulo.png" class="m-1 img-fluid text-primary">
+    <div class="navbar-wrapper">
+        <div class="container-fluid green-line position-relative nav-bar navbar-container p-0">
+            <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
                     </a>
-                    <div class="navbar-nav mr-auto py-0">
-                        <a href="video.html" class="nav-item nav-link" title="Videos">Paticaliente</a>
-                        <a href="gallery.html" class="nav-item nav-link" title="Fotografías">Siete Vidas</a>
-                        <a href="podcast.html" class="nav-item nav-link active" title="Podcast">Olfateando Información</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="index.html" class="nav-item nav-link" title="Página principal">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link" title="Conócenos">Compawñeras</a>
+                            <a href="paper.html" class="nav-item nav-link" title="Artículos">Huella Actual</a>
+                        </div>
+                        <a href="index.html" class="navbar-brand mx-1 d-none d-lg-block">
+                            <img src="images/titulo.png" class="m-1 img-fluid text-primary d-none d-xl-block">
+                            <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary d-xl-none">
+                        </a>
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="video.html" class="nav-item nav-link" title="Videos">Paticaliente</a>
+                            <a href="podcast.html" class="nav-item nav-link active" title="Podcast">Olfateando Información</a>
+                            <a href="gallery.html" class="nav-item nav-link" title="Fotografías">Siete Vidas</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
     </div>
     <!-- Navbar End -->
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
-        <div class="container text-center py-5">
-            <h1 class="text-green display-3 mt-lg-5">Contact</h1>
-            <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="">Home</a></p>
-                <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Contact</p>
+
+
+   <!-- Carousel Start -->
+   <div class="container-fluid p-0 mb-0 pb-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active d-flex flex-column align-items-center justify-content-start">
+                <img class="w-90" src="images/olfateando/4g-sección.jpg" alt="Image">
+                <div class="about-caption text-compawñeras d-flex flex-column align-items-center justify-content-start">
+                    
+                        <h1 class="display-3 text-compawñeras text-green-2">Olfateando Información</h1>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+</div>
 
 
-    <!-- Contact Start -->
+<section id="description-beige" class="pink-bg">
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <h1 class="section-title position-relative text-center mb-5">Contact Us For Any Query</h1>
+                    <h1 class="section-title position-relative text-center mb-5">Nuestra sección de <span class="orange-text">Podcast</span></h1>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="contact-form bg-light rounded p-5">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="col-sm-6 control-group">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="col-sm-6 control-group">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control p-4" rows="6" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary btn-block py-3 px-5" type="submit" id="sendMessageButton">Send Message</button>
-                            </div>
-                        </form>
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <h4 class="font-weight-light mb-4">Olfateando Información es el podcast oficial de Proyecto Peluchones, en el cual nos adentramos a través de la voz al mundo de los animales, manteniendo una amena conversación con expertos en diferentes aspectos, quienes nos hablan sobre sus especialidades y comparten con nosotras sus inquietudes y reclamos para mejorar la visión de la sociedad respecto a los animales.</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+</section> 
+
+<section class="zigzag-section">
+    <div  class="zigzag-container">
+        <!-- Bloque 1 -->
+        <div class="zigzag-block reverse" id="olfateando-la-etología">
+            <div class="zigzag-image reverse">
+                <iframe class="zigzag-image" style="border-radius:12px" src="https://open.spotify.com/embed/episode/2AtY5u9WH97QDgQSj7CCU8?utm_source=generator" width="560" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="zigzag-content right">
+                <div class="text-content reverse">
+                    <div class="service-item litte-service">
+                        <div class="service-img-pink mx-auto">
+                            <img class="rounded-circle w-75 h-75 bg-light p-3" src="images/vinilo-a.png" style="object-fit: cover;">
+                            <h2 class="zigzag-title">&nbsp;Olfateando la Etología</h2>
+                        </div>
+                    </div>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-1" class="expand-toggle">
+                        <label for="expand-toggle-1" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text justice">Emma Palacios es una psicóloga y etóloga que busca garantizar el “bienestar de los animales y las personas” desde 2023. Teniendo en cuenta que la etología en España empieza a ser más sonada gracias a que los animales ahora se consideran “seres sintientes” según el Código Civil. Te invitamos a escuchar esta conversación entre Mariangel Barra y Emma Palacios para conocer qué es la etología y por qué es tan relevante su papel. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bloque 2 -->
+        <div class="zigzag-block" id="olfateando-animales-exoticos">
+            <div class="zigzag-content left">
+                <div class="text-content">
+                    <div class="service-item litte-service">
+                        <div class="service-img-pink mx-auto">
+                            <img class="rounded-circle w-75 h-75 bg-light p-3" src="images/vinilo-b.png" style="object-fit: cover;">
+                            <h2 class="zigzag-title">&nbsp;Olfateando &nbsp;animales &nbsp;exóticos</h2>
+                        </div>
+                    </div>
+                    <h4 class="zigzag-subtitle media-subtitle">Animal Soul</h4>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-2" class="expand-toggle">
+                        <label for="expand-toggle-2" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text justice">Hablamos con Marta Rodrigo, fundadora de Animal Soul. Esta es una protectora en activo desde 2017 que ofrece un hogar a animales exóticos a través de casas de acogida. Con problemáticas como el poco compromiso de adoptantes y la venta legal continuada de conejos y otras especies, María Ondo y Marta Rodrigo conversan sobre esta problemática.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zigzag-image right">
+                <iframe class="zigzag-image" style="border-radius:12px" src="https://open.spotify.com/embed/episode/5FXIPrw16n7Zf6vjS45iFF?utm_source=generator&theme=0&t=0" width="560" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Bloque 3 -->
+        <div class="zigzag-block reverse" id="olfateando-una-casa-de-acogida">
+            <div class="zigzag-image reverse">
+                <iframe class="zigzag-image" style="border-radius:12px" src="https://open.spotify.com/embed/episode/0wvpAL0uoovX8FlfsCUE50?utm_source=generator" width="560" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="zigzag-content right">
+                <div class="text-content reverse">
+                    <div class="service-item litte-service">
+                        <div class="service-img-pink mx-auto">
+                            <img class="rounded-circle w-75 h-75 bg-light p-3" src="images/vinilo-d.png" style="object-fit: cover;">
+                            <h2 class="zigzag-title">Olfateando una casa de acogida</h2>
+                        </div>
+                    </div>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-3" class="expand-toggle">
+                        <label for="expand-toggle-3" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text justice">¿Cuál es la realidad de las casas de acogida en Aragón? ¿Qué problemas afrontan? Zoe Rubio propone estas y más preguntas a María José García, voluntaria en la Asociación Protectora ALMA e integrante de las casas de acogida de AMAR.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque 4 -->
+        <div class="zigzag-block" id="olfateando-la-realidad-del-conteo-animal">
+            <div class="zigzag-content left">
+                <div class="text-content">
+                    <div class="service-item litte-service">
+                        <div class="service-img-pink mx-auto">
+                            <img class="rounded-circle w-75 h-75 bg-light p-3" src="images/vinilo-c.png" style="object-fit: cover;">
+                            <h2 class="zigzag-title">&nbsp;Olfateando &nbsp;la realidad &nbsp;del conteo &nbsp;animal</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-4" class="expand-toggle">
+                        <label for="expand-toggle-4" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text justice">En este episodio profundizamos sobre uno de los mayores problemas de la situación animal en España: el conteo. Hasta la fecha, no se puede afirmar el número exacto de animales que existe en ninguna comunidad autónoma. La falta de microchips o la aparición de camadas indeseadas son solo algunos de los factores que agravan esta situación. De la mano de La Casita Tricolor, una asociación protectora fundada en 2023, Mariangel Barra y María Ondo presentan este episodio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zigzag-image right">
+                <iframe class="zigzag-image" style="border-radius:12px" src="https://open.spotify.com/embed/episode/5KUSihRMutZISUzuwst6k3?utm_source=generator&theme=0" width="560" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+
+         <!-- Bloque 5 -->
+         <div class="zigzag-block reverse" id="olfateando-a-exvoluntarios">
+            <div class="zigzag-image reverse">
+                <iframe class="zigzag-image" style="border-radius:12px" src="https://open.spotify.com/embed/episode/6CjjpNGpPGQjQqK2keHaXo?utm_source=generator" width="560" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="zigzag-content right">
+                <div class="text-content reverse">
+                    <div class="service-item litte-service">
+                        <div class="service-img-pink mx-auto">
+                            <img class="rounded-circle w-75 h-75 bg-light p-3" src="images/vinilo-d.png" style="object-fit: cover;">
+                            <h2 class="zigzag-title">Olfateando a &nbsp;&nbsp;exvoluntarios</h2>
+                        </div>
+                    </div>
+                    <h4 class="zigzag-subtitle media-subtitle">Jama Friebe</h4>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-5" class="expand-toggle">
+                        <label for="expand-toggle-5" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text justice">Conversamos con un exvoluntario del Centro de Protección Animal de Torrero en Zaragoza, Jama Friebe. Este exvoluntario nos cuenta de primera mano las principales dificultades que afrontan los centros de este tipo y su opinión sobre las medidas que se deberían tomar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque 6 -->
+        <div class="zigzag-block" id="olfateando-perros-de-caza">
+            <div class="zigzag-content left">
+                <div class="text-content">
+                    <div class="service-item litte-service">
+                        <div class="service-img-pink mx-auto">
+                            <img class="rounded-circle w-75 h-75 bg-light p-3" src="images/vinilo-b.png" style="object-fit: cover;">
+                            <h2 class="zigzag-title">Olfateando &nbsp;perros de caza</h2>
+                        </div>
+                    </div>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-6" class="expand-toggle">
+                        <label for="expand-toggle-6" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text justice">Marina Orfila es profesora de una escuela de idiomas y ha convivido en primera mano con la caza. Viene de una familia de cazadores y tiene conocidos que practican este ejercicio. En el episodio de hoy, junto a Zoe Rubio, nos explica sus vivencias y su opinión sobre la situación de los perros de caza y otros animales usados desde su posición como vegana.<br><br> 
+
+                                Recordamos que los perros de caza no están cubiertos por la Ley 7/2023 de la Ley de Protección de los Derechos y Bienestar Animal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zigzag-image right">
+                <iframe class="zigzag-image" style="border-radius:12px" src="https://open.spotify.com/embed/episode/5ELYdufXGE0uTK4bWCXRuS?utm_source=generator&theme=0" width="560" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+
+         <!-- Bloque 7 -->
+         <div class="zigzag-block reverse" id="olfateando-el-especial-proyecto-peluchones">
+            <div class="zigzag-image reverse">
+                <iframe class="zigzag-image" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3KfL9bvbyPAQn6F0Nol49i?utm_source=generator" width="560" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="zigzag-content right">
+                <div class="text-content reverse">
+                    <div class="service-item litte-service">
+                        <div class="service-img-pink mx-auto">
+                            <img class="rounded-circle w-75 h-75 bg-light p-3" src="images/vinilo-a.png" style="object-fit: cover;">
+                            <h2 class="zigzag-title">Olfateando el especial</h2>
+                        </div>
+                    </div>
+                    <h4 class="zigzag-subtitle media-subtitle">Proyecto Peluchones en Aragón Radio</h4>
+                    <div class="text-expandable">
+                        <input type="checkbox" id="expand-toggle-7" class="expand-toggle">
+                        <label for="expand-toggle-7" class="expand-btn"></label>
+                        <div class="expandable-content">
+                            <!-- Aquí va el contenido que quieres mostrar/ocultar -->
+                            <p class="zigzag-text justice">Escucha nuestro encuentro en Aragón Radio de la mano de El Tardeo, dirigido por Rafa Moyano. Donde tuvimos la oportunidad de darnos a conocer como Medio de Comunicación Digital periodístico sobre el abandono y maltrato animal, enfocado en promover la adopción, y realizado por estudiantes de Periodismo de la Universidad de Zaragoza.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+       
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+    </div>
+</section>
+   <!-- Footer Start -->
+   <section id="footer">
+    <div class="container-fluid footer py-5">
         <div class="container text-center py-5">
             <div class="row">
                 <div class="col-12 mb-4">
                     <a href="index.html" class="navbar-brand m-0">
-                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">i</span>CREAM</h1>
+                        <img src="images/titulo-logo.png" class="m-1 img-fluid text-primary">
                     </a>
                 </div>
                 <div class="col-12 mb-4">
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://m.youtube.com/@ProyectoPeluchones" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://open.spotify.com/show/4SGNU4GltaoeoVg5ruIvL3" target="_blank"><i class="fab fa-spotify fa-lg"></i></a>
+                    <a class="btn btn-outline-secondary btn-social" href="https://www.tiktok.com/@proyectopeluchones" target="_blank"><i class="fab fa-tiktok fa-lg"></i></a>
                 </div>
                 <div class="col-12 mt-2 mb-4">
                     <div class="row">
                         <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
-                            <h5 class="font-weight-bold mb-2">Get In Touch</h5>
-                            <p class="mb-2">123 Street, New York, USA</p>
-                            <p class="mb-0">+012 345 67890</p>
+                            <h5 class="font-weight-bold mb-2"></h5>
                         </div>
                         <div class="col-sm-6 text-center text-sm-left">
-                            <h5 class="font-weight-bold mb-2">Opening Hours</h5>
-                            <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
-                            <p class="mb-0">Sunday: Closed</p>
+                            <h5 class="font-weight-bold mb-2"></h5> 
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
-                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    <h5 class="font-weight-bold mb-2">Correo de Contacto</h5>
+                    <h5 class="font-weight-light mb-2" ><a href="#" data-toggle="modal" data-target="#contactModal">peluchonespeludones@gmail.com</a></h5><br>
+                    <p class="m-0">&copy;<b>Proyecto Peluchones 2025</b><a href="#"></a><!-- En colaboración con: <a href="https://muzzolinidev.com" target="_blank"> Muzzolini Dev</a> -->
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</section>
+<!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
+
+
 
 </html>

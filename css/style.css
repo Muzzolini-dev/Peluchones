@@ -323,6 +323,15 @@ button:focus {
   margin: 0 auto;
 }
 
+.orange-bg {
+  background-color: #fcd7c8;
+}
+
+.pink-bg {
+  background-color: #f5c5d7
+}
+
+
 .zigzag-block .reverse {
   flex-direction: row-reverse;
   text-align: right;
@@ -340,6 +349,13 @@ button:focus {
 
 .text-content {
   padding: 2rem;
+}
+
+.zigzag-dana {
+  font-family: 'Chewy', sans-serif; /* El tipo de letra que usas para títulos */
+  font-size: 3rem;
+  color: #137c79; /* Color principal de tu web */
+  margin-bottom: 1.5rem;
 }
 
 .zigzag-title {
@@ -412,6 +428,11 @@ button:focus {
   .zigzag-title {
       font-size: 2rem;
   }
+
+  .zigzag-dana {
+    font-size: 2.5rem;
+  }
+
   .zigzag-subtitle {
     font-size: 1.4rem;
 }
@@ -8066,6 +8087,10 @@ button.bg-dark:focus {
   box-shadow: none !important;
 }
 
+.w-15 {
+  width: 15% !important;
+}
+
 .w-25 {
   width: 25% !important;
 }
@@ -10745,6 +10770,33 @@ h6,
   z-index: 1;
 }
 
+.media-subtitle {
+ text-align: center;
+ z-index: 1;
+}
+
+.service-item .service-img-pink {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 150px;
+  z-index: 0;
+}
+
+.service-item .service-img-orange {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 150px;
+  z-index: 0;
+}
+
 .fa-angle-right .fa-angle-left {
   color: #33b4b2
 }
@@ -10759,6 +10811,10 @@ h6,
   height: 420px;  /* ajusta según necesites */
   display: flex;
   flex-direction: column;
+}
+
+.litte-service {
+  height:180px !important;
 }
 
 .service-item .btn-podcast {
@@ -10777,13 +10833,56 @@ h6,
   z-index: -1;
 }
 
+.service-item .service-img-pink::before {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 0;
+  bottom: -15px;
+  left: 0;
+  background: #f5c5d7;
+  border-radius: 150px;
+  z-index: -1;
+  padding-right: 5px;
+}
+
+.service-item .service-img-orange::before {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 0;
+  bottom: -15px;
+  left: 0;
+  background: #fcd7c8;
+  border-radius: 150px;
+  z-index: -1;
+  padding-right: 5px;
+}
+
+
+
 .service-item .service-img img {
   transition: 1s;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.service-item .service-img-pink img {
+  animation: girar 2s linear infinite;
 }
 
 .service-item:hover .service-img img {
   transform: rotate(360deg);
 }
+
+
 
 .btn-podcast {
   position: absolute;

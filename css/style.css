@@ -10942,10 +10942,6 @@ h6,
   height:80vh !important;
 }
 
-.paper-big-item {
-  height:80vh !important;
-}
-
 .product-item {
   height: 377px;
   display: flex;
@@ -11400,7 +11396,18 @@ h6,
     position: relative !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-}
+  }
+  .third-image {
+    max-width: 70vw !important;
+    width: 70vw !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    /* Forzamos el centrado con transformación */
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
   .paper-footer {
     width: 95%;
     padding-top: 0px !important;
@@ -11738,4 +11745,78 @@ h6,
 
 .expand-btn::before {
   content: "Mostrar más";
+}
+
+@media (max-width: 450px) {
+  .close {
+    right: 40px;
+    top: 5px;
+    font-size: 20px;
+  }
+
+  .paper-header {
+    padding-right: 30px; /* Espacio para el botón de cerrar */
+  }
+  .modal-content-paper {
+      max-width: 95vw;
+      margin: 10px auto;
+  }
+
+  .paper {
+      padding: 10px;
+  }
+
+  .paper-header h6 {
+      font-size: 0.9rem;
+  }
+
+  .paper-title h2 {
+      font-size: 1.5rem;
+  }
+
+  .paper-title h4 {
+      font-size: 1.2rem;
+  }
+
+  /* Ajuste de botones para que no se desborden */
+  .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  }
+
+  .btn-paper,
+  .btn-primary {
+      width: auto;
+      max-width: 200px;
+      margin: 5px 0;
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+
+  /* Ajuste del texto y pie de fotos */
+  .pie-foto {
+      font-size: 0.8rem;
+      margin: 10px 0;
+  }
+}
+
+/* Ajustes extremos para pantallas muy pequeñas */
+@media (max-width: 320px) {
+  .modal-content-paper {
+      margin: 5px;
+  }
+
+  .paper {
+      padding: 5px;
+  }
+
+  .paper-title h2 {
+      font-size: 1.3rem;
+  }
+
+  .paper-title h4 {
+      font-size: 1rem;
+  }
 }

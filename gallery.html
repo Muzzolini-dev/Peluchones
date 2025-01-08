@@ -176,7 +176,9 @@
         <div class="container-fluid my-5 py-5 px-auto">
             <div class="row justify-content-center m-0">
                 <div class="col-lg-5">
-                    <h1 class="section-title position-relative text-center mb-5">Galería de Fotorreportajes</h1>
+                    <h1 class="section-title position-relative text-center mb-5">Galería de Fotorreportajes</h1>  
+                    <a class="btn btn-secondary ml-3" href="javascript:void(0);" onclick="copyLink('https://proyectopeluchones.es/gallery.html',
+                        'gallery')" style="position: absolute; bottom: 40px; right: -20px; z-index: 9998;"><i class="fas fa-share-alt"></i></a>
                 </div>
             </div>
             <div class="row g-0 portfolio-container">
@@ -250,7 +252,7 @@
             <div class="paper-footer">
                 <div class="button-container">
                     <label for="expand-toggle-2" class="expand-btn"></label>
-                    <a href="images/siete/7v/SIETE VIDAS MONTADO. BARRA NAVAS MARIANGEL.pdf" class="btn-paper btn btn-secondary" download>Descargar Revista</a>
+                    <a href="images/siete/7v/SieteVidasRevista_Vol1.pdf" class="btn-paper btn btn-secondary" download>Descargar Revista</a>
                     <button data-dismiss="modal" data-toggle="modal" data-target="#siete-vidas-fotos-Modal" class="btn btn-primary">Ver Fotos</button>
                 </div>
                     <div class="text-expandable">
@@ -308,12 +310,12 @@
     </div>
   </div>
 
- <!-- Modal para Compañía en la Soledad -->
+ <!-- Modal para fotos Siete Vidas -->
  <div class="modal fade" id="siete-vidas-fotos-Modal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-body">
-                <div id="carouselMJM" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <div id="carousel7V" class="carousel slide" data-ride="carousel" data-interval="3000">
                     <div class="carousel-inner">
                         <div class="carousel-item  active">
                             <img src="images/siete/7v/7v-portada.jpg" class="d-block w-100">
@@ -355,13 +357,14 @@
                             <img src="images/siete/7v/7v-12.jpg" class="d-block w-100">
                         </div>
                     </div>
-                    <a class="carousel-control-prev sky-blue" href="#carouselMJM" role="button" data-slide="prev">
+                    <a class="carousel-control-prev sky-blue" href="#carousel7V" role="button" data-slide="prev">
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                     </a>
-                    <a class="carousel-control-next sky-blue" href="#carouselMJM" role="button" data-slide="next">
+                    <a class="carousel-control-next sky-blue" href="#carousel7V" role="button" data-slide="next">
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
                 </div>
+                <button data-dismiss="modal" data-toggle="modal" data-target="#siete-vidas" class="close-2">◀</button>
                 <button type="button" class="close" data-dismiss="modal">×</button>
             </div>
         </div>
@@ -862,10 +865,10 @@
                         </div>
                        
                     </div>
-                    <a class="carousel-control-prev sky-blue" href="#carouselAM" role="button" data-slide="prev">
+                    <a class="carousel-control-prev sky-blue" href="#carouselBOM" role="button" data-slide="prev">
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                     </a>
-                    <a class="carousel-control-next sky-blue" href="#carouselAM" role="button" data-slide="next">
+                    <a class="carousel-control-next sky-blue" href="#carouselBOM" role="button" data-slide="next">
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -907,6 +910,8 @@
                 <div class="col-12">
                     <h5 class="font-weight-bold mb-2">Correo de Contacto</h5>
                     <h5 class="font-weight-light mb-2" ><a href="#" data-toggle="modal" data-target="#contactModal">peluchonespeludones@gmail.com</a></h5><br>
+                    <h5 class="font-weight-bold mb-2">Universidad de Zaragoza, Facultad de Filosofía y Letras</h5>
+                    <h5 class="font-weight-light mb-2" ><a href="https://maps.app.goo.gl/P8U6TKAujV7Ed5a4A" target="_blank">C. de Pedro Cerbuna, 12, 50009 Zaragoza</a></h5><br>
                      <p class="m-0">&copy;<b>Proyecto Peluchones 2025</b><a href="#"></a><!-- En colaboración con: <a href="https://muzzolinidev.com" target="_blank"> Muzzolini Dev</a> -->
                     </p>
                 </div>
@@ -930,6 +935,30 @@
 <script src="lib/isotope/isotope.pkgd.min.js"></script>
 <script src="lib/lightbox/js/lightbox.min.js"></script>
 <script async src="//www.instagram.com/embed.js"></script>
+<script>//<![CDATA[
+    function copyLink(url, id) {
+        var aux = document.createElement("input");
+        var fullUrl = url + (id ? "#" + id : "");
+        aux.setAttribute("value", fullUrl);
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("copy");
+        document.body.removeChild(aux);
+
+       // Crear el modal
+        var modal = document.createElement("div");
+        modal.classList.add("copy-modal");
+        modal.innerHTML = "Enlace copiado";
+        document.body.appendChild(modal);
+
+        // Desvanecer y eliminar el modal después de 2 segundos
+        setTimeout(function() {
+        modal.classList.add("fade-out");
+        setTimeout(function() {
+            document.body.removeChild(modal);
+            }, 500);
+        }, 2000);
+    }</script>
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>

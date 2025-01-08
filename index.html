@@ -274,7 +274,7 @@
                     </button>        
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/21dQVT56OeE?si=fRpfY6HXglHCIFWF" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/21dQVT56OeE?si=fRpfY6HXglHCIFWF" id="video" allowscriptaccess="always" allow="autoplay"allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -361,7 +361,10 @@
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid w-100" src="images/7v-portada.jpg" alt="">
                         <a class="portfolio-btn text-portfolio" href="images/7v-portada.jpg" data-lightbox="portfolio">
-                            <p class="text-portfolio">Siete Vidas: Memorias de una Voluntaria</p>
+                            <p class="text-portfolio">Siete Vidas: Memorias de una Voluntaria</p>  
+                        </a>
+                        <a href="gallery.html#gallery" class="btn btn-secondary" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 9998;">
+                            Ver más
                         </a>
                     </div>
                 </div>
@@ -371,6 +374,9 @@
                         <a class="portfolio-btn text-portfolio" href="images/mjm-portada.jpg" data-lightbox="portfolio">
                             <p class="text-portfolio">Compañía en la Soledad</p>
                         </a>
+                        <a href="gallery.html#gallery" class="btn btn-secondary" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 9998;">
+                            Ver más
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 p-0 portfolio-item">
@@ -378,6 +384,9 @@
                         <img class="img-fluid w-100" src="images/pg-portada.jpg" alt="">
                         <a class="portfolio-btn text-portfolio" href="images/pg-portada.jpg" data-lightbox="portfolio">
                             <p class="text-portfolio">Proyecto Gato Teruel</p>
+                        </a>
+                        <a href="gallery.html#gallery" class="btn btn-secondary" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 9998;">
+                            Ver más
                         </a>
                     </div>
                 </div>
@@ -387,6 +396,9 @@
                         <a class="portfolio-btn text-portfolio" href="images/am-portada.jpg" data-lightbox="portfolio">
                             <p class="text-portfolio">Amigo Mío Teruel</p>
                         </a>
+                        <a href="gallery.html#gallery" class="btn btn-secondary" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 9998;">
+                            Ver más
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 p-0 portfolio-item">
@@ -395,6 +407,9 @@
                         <a class="portfolio-btn text-portfolio" href="images/4g-portada.jpg" data-lightbox="portfolio">
                             <p class="text-portfolio">4 Gatos y Tú: Adoptar un Amigo</p>
                         </a>
+                        <a href="gallery.html#gallery" class="btn btn-secondary" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 9998;">
+                            Ver más
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 p-0 portfolio-item">
@@ -402,6 +417,9 @@
                         <img class="img-fluid w-100" src="images/bom-portada.jpg" alt="">
                         <a class="portfolio-btn text-portfolio" href="images/bom-portada.jpg" data-lightbox="portfolio">
                             <p class="text-portfolio">Patrulla Canina</p>
+                        </a>
+                        <a href="gallery.html#gallery" class="btn btn-secondary" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 9998;">
+                            Ver más
                         </a>
                     </div>
                 </div>
@@ -562,7 +580,7 @@
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1 class="section-title position-relative mb-5">Publicaciones destacadas de Instagram</h1>
+                        <h1 class="section-title position-relative mb-5">Publicaciones destacadas de <a href="https://www.instagram.com/proyectopeluchones?igsh=NjQzems2OGZmaTNr" target="_blank">Instagram</a></h1>
                     </div>
                     <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
                 </div>
@@ -708,6 +726,8 @@
                     <div class="col-12">
                         <h5 class="font-weight-bold mb-2">Correo de Contacto</h5>
                         <h5 class="font-weight-light mb-2" ><a href="#" data-toggle="modal" data-target="#contactModal">peluchonespeludones@gmail.com</a></h5><br>
+                        <h5 class="font-weight-bold mb-2">Universidad de Zaragoza, Facultad de Filosofía y Letras</h5>
+                    <h5 class="font-weight-light mb-2" ><a href="https://maps.app.goo.gl/P8U6TKAujV7Ed5a4A" target="_blank">C. de Pedro Cerbuna, 12, 50009 Zaragoza</a></h5><br>
                         <p class="m-0">&copy;<b>Proyecto Peluchones 2025</b><a href="#"></a><!-- En colaboración con: <a href="https://muzzolinidev.com" target="_blank"> Muzzolini Dev</a> -->
                         </p>
                     </div>
@@ -731,6 +751,30 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script async src="//www.instagram.com/embed.js"></script>
+    <script>//<![CDATA[
+        function copyLink(url, id) {
+            var aux = document.createElement("input");
+            var fullUrl = url + (id ? "#" + id : "");
+            aux.setAttribute("value", fullUrl);
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand("copy");
+            document.body.removeChild(aux);
+    
+           // Crear el modal
+            var modal = document.createElement("div");
+            modal.classList.add("copy-modal");
+            modal.innerHTML = "Enlace copiado";
+            document.body.appendChild(modal);
+    
+            // Desvanecer y eliminar el modal después de 2 segundos
+            setTimeout(function() {
+            modal.classList.add("fade-out");
+            setTimeout(function() {
+                document.body.removeChild(modal);
+                }, 500);
+            }, 2000);
+        }</script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

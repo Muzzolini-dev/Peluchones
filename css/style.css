@@ -64,7 +64,8 @@ iframe[src*="youtube.com"]:hover,
 .btn-play:hover,
 .btn,
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.testimonial-carousel .owl-dots:hover {
   cursor: url("../images/cursor-paw-sel.cur"), auto !important;
 }
 
@@ -4504,6 +4505,7 @@ input[type="button"].btn-block {
   position: relative;
   height: auto; /* En lugar de una altura fija */
   min-height: fit-content; /* Para asegurar que se ajuste al contenido */
+  z-index: 100000;
 }
 
 @media (min-width: 992px) {
@@ -4716,6 +4718,7 @@ input[type="button"].btn-block {
   flex-grow: 1;
   align-items: center;
   justify-content: space-between;
+  z-index: 100000;
 }
 
 .navbar-toggler {
@@ -10939,6 +10942,10 @@ h6,
   height:80vh !important;
 }
 
+.paper-big-item {
+  height:80vh !important;
+}
+
 .product-item {
   height: 377px;
   display: flex;
@@ -10977,6 +10984,13 @@ h6,
   font-size: 0; /* Eliminates tiny spaces between inline elements */
   line-height: 0; /* Ensures no line-height gaps */
    background: #000; /* Fallback color in case any microscopic gaps remain */
+}
+
+.paper-button-cells {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: end;
 }
 
 .portfolio-item {
@@ -11131,6 +11145,35 @@ h6,
 }
 
 .second-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copy-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  opacity: 1;
+  transition: opacity 0.5s;
+  z-index: 9999;
+}
+
+.copy-modal.fade-out {
+  opacity: 0;
+}
+
+.third-image {
+  max-width: 20vw !important;
+  width:20vw !important;
+  margin-bottom: 2px;
+  justify-content: center !important;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -11376,7 +11419,8 @@ h6,
   text-decoration: none;
   opacity: 0;
   transition: .3s;
-  z-index: 2;
+  z-index: 1000;
+  cursor:pointer!important;
 }
 
 .portfolio-item:hover .portfolio-btn {
@@ -11385,6 +11429,7 @@ h6,
   height: calc(100% - 60px);
   top: 30px;
   left: 30px;
+  cursor:pointer!important;
 }
 
 .modal-ind {
@@ -11458,6 +11503,20 @@ h6,
   font-weight: bold;
   opacity: 1 !important; /* Asegura que la opacidad sea 100% */
   z-index: 10000 !important;
+}
+
+.close-2 {
+  position: absolute; /* Posiciona el botón de cerrar absolutamente */
+  float:left;
+  top: 12px; /* Ajusta según sea necesario */
+  left: 18px; /* Ajusta según sea necesario */
+  color: #e36849;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1 !important; /* Asegura que la opacidad sea 100% */
+  z-index: 10000 !important;
+  background: transparent;
+  border: none;
 }
 
 .team-item .team-img {

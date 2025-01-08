@@ -414,6 +414,8 @@
                     <div class="col-12">
                         <h5 class="font-weight-bold mb-2">Correo de Contacto</h5>
                         <h5 class="font-weight-light mb-2" ><a href="#" data-toggle="modal" data-target="#contactModal">peluchonespeludones@gmail.com</a></h5><br>
+                        <h5 class="font-weight-bold mb-2">Universidad de Zaragoza, Facultad de Filosofía y Letras</h5>
+                    <h5 class="font-weight-light mb-2" ><a href="https://maps.app.goo.gl/P8U6TKAujV7Ed5a4A" target="_blank">C. de Pedro Cerbuna, 12, 50009 Zaragoza</a></h5><br>
                         <p class="m-0">&copy;<b>Proyecto Peluchones 2025</b><a href="#"></a><!-- En colaboración con: <a href="https://muzzolinidev.com" target="_blank"> Muzzolini Dev</a> -->
                         </p>
                     </div>
@@ -437,6 +439,30 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script async src="//www.instagram.com/embed.js"></script>
+    <script>//<![CDATA[
+        function copyLink(url, id) {
+            var aux = document.createElement("input");
+            var fullUrl = url + (id ? "#" + id : "");
+            aux.setAttribute("value", fullUrl);
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand("copy");
+            document.body.removeChild(aux);
+    
+           // Crear el modal
+            var modal = document.createElement("div");
+            modal.classList.add("copy-modal");
+            modal.innerHTML = "Enlace copiado";
+            document.body.appendChild(modal);
+    
+            // Desvanecer y eliminar el modal después de 2 segundos
+            setTimeout(function() {
+            modal.classList.add("fade-out");
+            setTimeout(function() {
+                document.body.removeChild(modal);
+                }, 500);
+            }, 2000);
+        }</script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

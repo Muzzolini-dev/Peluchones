@@ -65,7 +65,14 @@ iframe[src*="youtube.com"]:hover,
 .btn,
 .btn-primary,
 .btn-secondary,
-.testimonial-carousel .owl-dots:hover {
+.testimonial-carousel .owl-dots:hover 
+.portfolio-btn:hover
+.portfolio-btn
+.portfolio-container
+.portfolio-container:hover
+.portfolio-item
+.product-item:hover
+#gallery {
   cursor: url("../images/cursor-paw-sel.cur"), auto !important;
 }
 
@@ -632,12 +639,12 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 @media (max-width: 1200px) {
   h4, .h4 {
-    font-size: calc(1.275rem + 0.3vw) ;
+    font-size: calc(1.150rem + 0.3vw) ;
   }
 }
 
@@ -2640,6 +2647,28 @@ fieldset:disabled a.btn {
   border-color: #33b4b2;
 }
 
+.btn-pink {
+  background-color: #ff6fa4; 
+  border-color: #ff6fa4
+}
+
+.btn-pink:hover {
+  color: #212529;
+  background-color: #33b4b2!important;
+  border-color: #33b4b2!important;
+}
+
+.btn-pink-2 {
+  background-color: #ff6fa4; 
+  border-color: #ff6fa4
+}
+
+.btn-pink-2:hover {
+  color: #212529;
+  background-color: #e36849;
+  border-color: #e36849;
+}
+
 /* Estilos específicos para el carrusel MVV (Misión, Visión, Valores) */
 .mvv-carousel-container {
   position: relative;
@@ -2789,6 +2818,14 @@ fieldset:disabled a.btn {
   width: fit-content;
   padding: 10px 15px;
   font-size: 16px;
+}
+
+.pink-text {
+  color: #f5c5d7;
+}
+
+.btn-team:hover .pink-text {
+  color:inherit
 }
 
 .btn-secondary:hover {
@@ -6767,11 +6804,13 @@ a.close.disabled {
 }
 
 .carousel-control-prev {
-  left: 0;
+  bottom: -450px;
+  left: -10px;
 }
 
 .carousel-control-next {
-  right: 0;
+  bottom: -450px;
+  right: -10px;
 }
 
 .carousel-control-prev-icon,
@@ -8395,6 +8434,106 @@ button.bg-dark:focus {
 
 .p-3 {
   padding: 1rem !important;
+}
+
+.banner_1 {
+  max-width: 900px; 
+  margin-right: 3rem
+}
+
+.banner_2 {
+  max-width: 900px;
+  margin-left: 4rem
+}
+
+@media (max-width: 1250px) {
+  .banner_1 {
+    margin-right: 2em
+  }
+
+  .banner_2 {
+    margin-left: 3rem
+  }
+
+  .carousel-control-prev {
+    bottom: -400px; 
+  }
+
+  .carousel-control-next {
+    bottom: -400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-control-prev {
+    bottom: -300px; 
+  }
+
+  .carousel-control-next {
+    bottom: -300px;
+  }
+}
+
+@media (max-width: 780px) {
+  .banner_1 {
+    margin-right: 0.5em
+  }
+
+  .banner_2 {
+    margin-left: 1.5rem
+  }
+
+  .carousel-control-prev {
+    bottom: -250px; 
+  }
+
+  .carousel-control-next {
+    bottom: -250px;
+  }
+}
+
+@media (max-width: 650px) {
+  .banner_1 {
+    margin-right: 0
+  }
+
+  .banner_2 {
+    margin-left: 0
+  }
+
+  .carousel-caption{
+    align-items: center!important;
+  }  
+
+  .carousel-control-prev {
+    bottom: -150px; 
+  }
+
+  .carousel-control-next {
+    bottom: -150px;
+  }
+}
+
+@media (max-width: 440px) {
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px!important;
+    height:30px!important
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 12px!important;
+    margin-bottom: -12px!important;
+  }
+  .carousel-control-prev {
+    bottom: -30px; 
+  }
+
+  .carousel-control-next {
+    bottom: -30px;
+  }
 }
 
 .pt-3,
@@ -10142,6 +10281,11 @@ button.bg-dark:focus {
   font-family: "Chewy", sans-serif;
 }
 
+.orange-paw-text {
+  color: #e36849;
+  text-shadow: -2px 2px 3px #f3e9e2, 2px 2px 3px #f3e9e2, 2px -2px 3px #f3e9e2, -2px -2px 3px #f3e9e2
+}
+
 .text-beige-xl {
   color: #f3e9e2;
   text-shadow: -2px 2px 3px #e36849, 2px 2px 3px #e36849, 2px -2px 3px #e36849, -2px -2px 3px #e36849;
@@ -10150,6 +10294,10 @@ button.bg-dark:focus {
 
 .orange-text {
   color: #e36849;
+}
+
+.nav-link:hover .orange-text {
+  color: inherit
 }
 
 .text-primary {
@@ -10596,7 +10744,7 @@ h6,
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -11286,7 +11434,7 @@ h6,
   color: #e36849;
   font-size: 40px;
   font-weight: bold;
-  cursor: pointer;
+  cursor: url("../images/cursor-paw-sel.cur"), auto !important;;
   opacity: 1 !important; /* Asegura que la opacidad sea 100% */
   z-index: 10000 !important;
 }
